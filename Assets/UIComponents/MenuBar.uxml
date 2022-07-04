@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Bar" style="position: absolute; bottom: 0; width: 100%; height: 318px; align-items: center;">
+        <ui:VisualElement name="left" style="width: 33%; height: 100%; left: 0; position: absolute; align-items: center; justify-content: center;">
+            <ui:VisualElement name="goBack" style="width: 210px; height: 210px; align-items: stretch; background-image: url(&apos;project://database/Assets/Sprites/BackArrow.png?fileID=2800000&amp;guid=0817db0014d0f41e38a9fc9ddeb9ff51&amp;type=3#BackArrow&apos;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="middle" style="width: 33%; height: 100%; align-items: center; justify-content: center;">
+            <ui:VisualElement name="trophy" style="width: 210px; height: 210px; align-items: center; justify-content: center; background-image: url(&apos;project://database/Assets/Sprites/TrophyArrow.png?fileID=2800000&amp;guid=9d54023b615984865a786a8939bcf1ed&amp;type=3#TrophyArrow&apos;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="right" style="width: 33%; height: 100%; position: absolute; right: 0; justify-content: center; align-items: center;">
+            <ui:VisualElement name="home" style="width: 210px; height: 210px; background-image: url(&apos;project://database/Assets/Sprites/HomeArrow.png?fileID=2800000&amp;guid=767459fe2bba8486ba189c93ba6cdd78&amp;type=3#HomeArrow&apos;);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
