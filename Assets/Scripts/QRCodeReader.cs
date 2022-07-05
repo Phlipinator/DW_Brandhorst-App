@@ -105,5 +105,7 @@ public class QRCodeReader : MonoBehaviour
             _textOut.text = "FAILED TRY";
         }
     }
-    
+
+    //For questions ask Philipp Thalhammer
+
 }
