@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Hint" src="project://database/Assets/UIComponents/Hint.uxml?fileID=9197481963319205126&amp;guid=da8d425523f4c4d2c9a61fa53921472c&amp;type=3#Hint" />
+    <ui:VisualElement name="view" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Sprites/Scene3/orange%20background.png?fileID=2800000&amp;guid=584e7b173927c44e9b261831a14c936c&amp;type=3#orange background&apos;);">
+        <ui:ScrollView vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden" name="content" style="position: absolute; top: auto; height: 100%; width: 100%;">
+            <ui:VisualElement name="top_distance" style="height: 360px;" />
+            <ui:VisualElement name="Artwork_question" style="background-image: url(&apos;project://database/Assets/Sprites/Scene3/4.png?fileID=2800000&amp;guid=41fe07b7f3a1443369847004ee12e6f2&amp;type=3#4&apos;); width: 912px; height: 1215px; -unity-background-scale-mode: stretch-to-fill; left: 129px; top: auto; display: flex;" />
+            <ui:Label tabindex="-1" text="Kannst du dieses Kunstwerk finden und dessen QR-Code scannen?" display-tooltip-when-elided="true" style="white-space: normal; font-size: 60px; left: 198px; width: 774px; padding-bottom: 0; margin-bottom: 30px; color: rgb(255, 255, 255);" />
+            <ui:Instance template="Hint" name="Hint1" style="left: 198px; width: 774px; display: flex;" />
+            <ui:Instance template="Hint" name="Hint2" style="left: 198px; width: 774px;" />
+            <ui:VisualElement style="height: 342px;" />
+        </ui:ScrollView>
+        <ui:VisualElement name="Header" style="height: 180px; background-image: url(&apos;project://database/Assets/Sprites/Scene3/Titel_Kunstwerk_mit_Blurr.png?fileID=2800000&amp;guid=f47b7ca500f264797b2c39a6a33f9887&amp;type=3#Titel_Kunstwerk_mit_Blurr&apos;); position: absolute; left: 90px; top: 105px; width: 990px;" />
+        <ui:VisualElement name="footer" style="background-image: url(&apos;project://database/Assets/Sprites/Scene3/menu_bar_gradient.png?fileID=2800000&amp;guid=b941f676694fb4285b7591d02bc1af1b&amp;type=3#menu_bar_gradient&apos;); width: 100%; height: 342px; bottom: 0; position: absolute;" />
+        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="button_scan" enable-rich-text="true" style="position: absolute; left: 450px; background-image: url(&apos;project://database/Assets/Sprites/Scene3/qr_button_normal.png?fileID=2800000&amp;guid=94f835e05ee7c4f1facdd8cb178fdfb2&amp;type=3#qr_button_normal&apos;); bottom: 54px; width: 270px; height: 270px; background-color: rgba(88, 88, 88, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
