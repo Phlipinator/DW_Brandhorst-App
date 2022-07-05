@@ -26,5 +26,24 @@ public class SceneManagerScript : MonoBehaviour
         SceneManager.LoadScene("Test2");
     }
 
+    //artworkID can be passed with this function to make sure the right artwork is displayed
+    public void goToThird(string artworkID)
+    {
+        PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Test2");
+    }
+
+    public void goToFourth()
+    {
+        PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Test2");
+    }
+
+    public void goToSixt()
+    {
+        PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Test2");
+    }
+
     //For questions ask Philipp Thalhammer
 }

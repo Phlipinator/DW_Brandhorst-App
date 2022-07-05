@@ -8,7 +8,7 @@ public class PersistentManagerScript : MonoBehaviour
     //THIS SCRIPT NEEDS SHOULD NOT BE TOUCHED; AS IT ONLY NEEDS TO EXIST IN THE FIRST SCENE
     public static PersistentManagerScript Instance { get; private set;}
 
-    public int artworkID;
+    public string artworkID;
     public List<string> sceneHistory;
 
     //Singleton behaviour, do not touch!

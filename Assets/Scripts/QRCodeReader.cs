@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ZXing;
-using TMPro;
 using UnityEngine.UI;
 
 public class QRCodeReader : MonoBehaviour
@@ -11,20 +10,25 @@ public class QRCodeReader : MonoBehaviour
     private RawImage _rawImageBackground;
     [SerializeField]
     private AspectRatioFitter _aspectRatioFitter;
-    [SerializeField]
-    private TextMeshProUGUI _textOut;
 
     private bool _isCamAvailible;
     private WebCamTexture _cameraTexture;
 
-    public GameObject Screen;
-    private bool success = false;
+    public GameObject sucessScreen;
+    public GameObject failScreen;
+
+    //maybe this bool needs to be set to false again for every new scan
+    public bool success = false;
+    private string QRText;
 
 
     void Start()
     {
+        //Initialises cam
         SetUpCamera();
-        Screen.SetActive(false);
+        //Makes both screens invisible by default
+        sucessScreen.SetActive(false);
+        failScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,27 +43,19 @@ public class QRCodeReader : MonoBehaviour
         }
         else
         {
-            //In this switch case the handling for all diffrent QR-Codes will be done
-            switch (_textOut.text)
+            if (QRText == PersistentManagerScript.Instance.artworkID)
             {
-                case "Test1":
-                    Debug.Log("Hallo das ist Test1");
-                    break;
-                case "Test2":
-                    Debug.Log("Hallo das ist Test2");
-                    break;
+                sucessScreen.SetActive(true);
+            }
+            else
+            {
+                failScreen.SetActive(false);
             }
             
         }
     }
-    //This Method can be called when you want to resume scanning
-    public void BackToScan()
-    {
-        success = false;
-        Screen.SetActive(false);
-
-    }
-
+    
+    //Initialises cam, DO NOT TOUCH
     private void SetUpCamera()
     {
         _cameraTexture = new WebCamTexture();
@@ -92,9 +88,8 @@ public class QRCodeReader : MonoBehaviour
             Result result = barcodeReader.Decode(_cameraTexture.GetPixels32(), _cameraTexture.width, _cameraTexture.height);
             if (result != null)
             {
-                _textOut.text = result.Text;
+                QRText = result.Text;
                 //This stops the Scanning one a result has been detected
-                Screen.SetActive(true);
                 success = true;
                 
             }
@@ -102,7 +97,7 @@ public class QRCodeReader : MonoBehaviour
         }
         catch
         {
-            _textOut.text = "FAILED TRY";
+            //do nothing
         }
     }
 
