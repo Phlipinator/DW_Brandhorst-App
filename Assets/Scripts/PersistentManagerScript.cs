@@ -9,6 +9,7 @@ public class PersistentManagerScript : MonoBehaviour
     public static PersistentManagerScript Instance { get; private set;}
 
     public string artworkID;
+    public string roomID;
     public List<string> sceneHistory;
 
     //Singleton behaviour, do not touch!

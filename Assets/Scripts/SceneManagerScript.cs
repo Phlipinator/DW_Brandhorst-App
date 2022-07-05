@@ -20,8 +20,10 @@ public class SceneManagerScript : MonoBehaviour
         SceneManager.LoadScene("Test1");
     }
 
-    public void goToSecond()
+    //roomID can be passed with this function to make sure the right artwork is displayed
+    public void goToSecond(string roomID)
     {
+        PersistentManagerScript.Instance.roomID = roomID;
         PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Test2");
     }
@@ -29,6 +31,7 @@ public class SceneManagerScript : MonoBehaviour
     //artworkID can be passed with this function to make sure the right artwork is displayed
     public void goToThird(string artworkID)
     {
+        PersistentManagerScript.Instance.artworkID = artworkID;
         PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Test2");
     }
