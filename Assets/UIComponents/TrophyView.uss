@@ -1,0 +1,18 @@
+.custom-label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(68, 138, 255);
+}
+
+.element {
+}
+
+.element {
+    width: 438px;
+    height: 567px;
+    background-image: url('project://database/Assets/Sprites/Pics_Challenges/1.png?fileID=2800000&guid=dfb8713266acb4361bb5a4ec6d2c21d2&type=3#1');
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

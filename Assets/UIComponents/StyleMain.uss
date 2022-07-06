@@ -1,0 +1,17 @@
+:root
+{
+
+}
+ 
+.image-list-element {
+	width: 438px;
+	height: 567px;
+	margin: 25px;
+}
+
+.menu-button {
+	width: 210px;
+	height: 210px;
+	background-color: none;
+	border-width: 0;
+}
