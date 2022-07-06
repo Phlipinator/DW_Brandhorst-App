@@ -6,7 +6,15 @@ using UnityEngine.UIElements;
 
 public class Scene3 : MonoBehaviour
 {
-    
+    public Texture2D img01;
+    public Texture2D img02;
+    public Texture2D img03;
+    public Texture2D img04;
+    public Texture2D img05;
+    public Texture2D img06;
+    public Texture2D img07;
+    public Texture2D img08;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +24,7 @@ public class Scene3 : MonoBehaviour
 
     private void Awake()
     {
+        //einfach derweil mal ignorieren ###
         var root = this.GetComponent<UIDocument>().rootVisualElement;
         var view = root.Q<VisualElement>("view");
         Button scanButton = view.Q<Button>("button_scan");
@@ -31,16 +40,30 @@ public class Scene3 : MonoBehaviour
 
         Button hintButton2 = segmentButtonTimer2.Q<Button>("button");
 
+        var artworkThumbnail = content.Q<VisualElement>("artwork_thumbnail");
+        //###
+
+
+        //in einem Switch-Case, je nach ausgewähltem Bild.
+        artworkThumbnail.style.backgroundImage = new StyleBackground(img01);
+
+
+        //zum Szene wechseln in Scene4 (QR-Code scanner)
         scanButton.clicked += () =>
         {
             Debug.Log("clicked");
         };
 
+
+
+
+        //Zeigen Tipps an:
         hintButton1.clicked += () =>
         {
             Debug.Log("Hint button 1 clicked");
             segmentButtonTimer1.style.display = DisplayStyle.None;
             segmentHint1.style.display = DisplayStyle.Flex;
+            
         };
 
         hintButton2.clicked += () =>

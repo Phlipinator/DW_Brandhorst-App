@@ -3,7 +3,7 @@
     <ui:VisualElement name="view" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Sprites/Scene3/orange%20background.png?fileID=2800000&amp;guid=584e7b173927c44e9b261831a14c936c&amp;type=3#orange background&apos;);">
         <ui:ScrollView vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden" name="content" style="position: absolute; top: auto; height: 100%; width: 100%;">
             <ui:VisualElement name="top_distance" style="height: 360px;" />
-            <ui:VisualElement name="Artwork_question" style="background-image: url(&apos;project://database/Assets/Sprites/Scene3/4.png?fileID=2800000&amp;guid=41fe07b7f3a1443369847004ee12e6f2&amp;type=3#4&apos;); width: 912px; height: 1215px; -unity-background-scale-mode: stretch-to-fill; left: 129px; top: auto; display: flex;" />
+            <ui:VisualElement name="artwork_thumbnail" style="background-image: url(&apos;project://database/Assets/Sprites/Scene3/4.png?fileID=2800000&amp;guid=41fe07b7f3a1443369847004ee12e6f2&amp;type=3#4&apos;); width: 912px; height: 1215px; -unity-background-scale-mode: stretch-to-fill; left: 129px; top: auto; display: flex;" />
             <ui:Label tabindex="-1" text="Kannst du dieses Kunstwerk finden und dessen QR-Code scannen?" display-tooltip-when-elided="true" style="white-space: normal; font-size: 60px; left: 198px; width: 774px; padding-bottom: 0; margin-bottom: 30px; color: rgb(255, 255, 255);" />
             <ui:Instance template="Hint" name="Hint1" style="left: 198px; width: 774px; display: flex;" />
             <ui:Instance template="Hint" name="Hint2" style="left: 198px; width: 774px;" />

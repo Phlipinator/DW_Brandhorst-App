@@ -268,3 +268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c270ea0c10a82484b939afdbf9fa3cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  img01: {fileID: 2800000, guid: 41fe07b7f3a1443369847004ee12e6f2, type: 3}
+  img02: {fileID: 2800000, guid: 29d92c67045c042f8895b1f7444b18c3, type: 3}
+  img03: {fileID: 2800000, guid: 72a6d1444fe674be0a7167b1562554f1, type: 3}
+  img04: {fileID: 2800000, guid: e5fd2ae034b424c7d97bf95622434a7c, type: 3}
+  img05: {fileID: 2800000, guid: 15e794b8156d34f09b0ef3d7bf9b0bf1, type: 3}
+  img06: {fileID: 2800000, guid: d03850525519f42ceafe5dc45f26292a, type: 3}
+  img07: {fileID: 2800000, guid: cc49cd15890d84378b3c68b61333b4c3, type: 3}
+  img08: {fileID: 2800000, guid: 860fbfb1859d44a9288ee4054272eac7, type: 3}
