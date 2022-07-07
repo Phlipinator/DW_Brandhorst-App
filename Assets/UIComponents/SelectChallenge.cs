@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.IO;
 
 public class SelectChallenge : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class SelectChallenge : MonoBehaviour
 
         art1.clicked += () =>
         {
+            //artID aktualisieren aus der Liste
+
+            //Szene wechseln
             Debug.Log("1clicked");
         };
 
