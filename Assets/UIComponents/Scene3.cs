@@ -45,7 +45,7 @@ public class Scene3 : MonoBehaviour
 
 
         //in einem Switch-Case, je nach ausgewähltem Bild.
-        artworkThumbnail.style.backgroundImage = new StyleBackground(img01);
+        //artworkThumbnail.style.backgroundImage = new StyleBackground(img01);
 
 
         //zum Szene wechseln in Scene4 (QR-Code scanner)
@@ -63,7 +63,8 @@ public class Scene3 : MonoBehaviour
             Debug.Log("Hint button 1 clicked");
             segmentButtonTimer1.style.display = DisplayStyle.None;
             segmentHint1.style.display = DisplayStyle.Flex;
-            
+            artworkThumbnail.style.backgroundImage = new StyleBackground(img02);
+
         };
 
         hintButton2.clicked += () =>
