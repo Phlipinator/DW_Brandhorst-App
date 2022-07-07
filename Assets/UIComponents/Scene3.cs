@@ -14,6 +14,7 @@ public class Scene3 : MonoBehaviour
     public Texture2D img06;
     public Texture2D img07;
     public Texture2D img08;
+    public SceneManagerScript sceneChange;
 
     // Start is called before the first frame update
     void Start()
@@ -43,14 +44,42 @@ public class Scene3 : MonoBehaviour
         var artworkThumbnail = content.Q<VisualElement>("artwork_thumbnail");
         //###
 
-
-        //in einem Switch-Case, je nach ausgewähltem Bild.
-        //artworkThumbnail.style.backgroundImage = new StyleBackground(img01);
-
+        //also change Tips? 
+        switch (PersistentManagerScript.Instance.artworkID)
+        {
+            case "art1":
+                artworkThumbnail.style.backgroundImage = new StyleBackground(img01);
+                break;
+            case "art2":
+                artworkThumbnail.style.backgroundImage = new StyleBackground(img02);
+                break;
+            case "art3":
+                artworkThumbnail.style.backgroundImage = new StyleBackground(img03);
+                break;
+            case "art4":
+                artworkThumbnail.style.backgroundImage = new StyleBackground(img04);
+                break;
+            case "art5":
+                artworkThumbnail.style.backgroundImage = new StyleBackground(img05);
+                break;
+            case "art6":
+                artworkThumbnail.style.backgroundImage = new StyleBackground(img06);
+                break;
+            case "art7":
+                artworkThumbnail.style.backgroundImage = new StyleBackground(img07);
+                break;
+            case "art8":
+                artworkThumbnail.style.backgroundImage = new StyleBackground(img08);
+                break;
+            default:
+                Debug.Log("Error");
+                break;
+        }
 
         //zum Szene wechseln in Scene4 (QR-Code scanner)
         scanButton.clicked += () =>
         {
+            sceneChange.goToFourth();
             Debug.Log("clicked");
         };
 

@@ -6,6 +6,7 @@ using System.IO;
 
 public class SelectChallenge : MonoBehaviour
 {
+    public SceneManagerScript sceneChange;
     void Awake()
     {
         //get Buttons of each Challenge
@@ -22,43 +23,51 @@ public class SelectChallenge : MonoBehaviour
         art1.clicked += () =>
         {
             //artID aktualisieren aus der Liste
-
+            sceneChange.goToThird("art1");
             //Szene wechseln
+            
             Debug.Log("1clicked");
         };
 
         art2.clicked += () =>
         {
+            sceneChange.goToThird("art2");
             Debug.Log("2clicked");
         };
 
         art3.clicked += () =>
         {
+            sceneChange.goToThird("art3");
             Debug.Log("3clicked");
         };
 
         art4.clicked += () =>
         {
+            sceneChange.goToThird("art4");
             Debug.Log("4clicked");
         };
 
         art5.clicked += () =>
         {
+            sceneChange.goToThird("art5");
             Debug.Log("5clicked");
         };
 
         art6.clicked += () =>
         {
+            sceneChange.goToThird("art6");
             Debug.Log("6clicked");
         };
 
         art7.clicked += () =>
         {
+            sceneChange.goToThird("art7");
             Debug.Log("7clicked");
         };
 
         art8.clicked += () =>
         {
+            sceneChange.goToThird("art8");
             Debug.Log("8clicked");
         };
     }

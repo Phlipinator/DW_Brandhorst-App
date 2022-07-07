@@ -4,20 +4,21 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.IO;
 
-public class SelectRoom : MonoBehaviour
+public class Start_Next : MonoBehaviour
 {
     public SceneManagerScript sceneChange;
+    
     void Awake()
     {
         //get Buttons of each Challenge
         var root = this.GetComponent<UIDocument>().rootVisualElement;
-        Button room1 = root.Q<Button>("ScrollContent");
+        Button next = root.Q<Button>("weiterButton");
 
-        room1.clicked += () =>
+        next.clicked += () =>
         {
-            //Szene wechseln, update RoomID
-            sceneChange.goToSecond("room1");
-            Debug.Log("room1 clicked");
+            //Szene wechseln
+            sceneChange.goToFirst();
+            Debug.Log("Next clicked");
         };
 
         
@@ -25,7 +26,7 @@ public class SelectRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Debug.Log("Hi");
     }
 
     // Update is called once per frame
