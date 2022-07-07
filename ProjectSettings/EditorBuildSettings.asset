@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3_Detail-Challenges.unity
     guid: 299b91add37f8e14b9515a815c8ec53f
+  - enabled: 1
+    path: Assets/Scenes/4_QR-Scanner.unity
+    guid: 82105467eed204239ae0f9d474fd1a17
   - enabled: 0
     path: Assets/Scenes/TestStart.unity
     guid: f52b694103c124c6f8e1996a59c7d2aa
