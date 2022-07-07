@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: e19a2e17b30a498409b20e47e76a6cfd
+<<<<<<< HEAD:Assets/TestAssets/haus_button_normal.png.meta
+guid: 78c484e0f558543dfb249b1f118f432b
+=======
+guid: bf830fb291a5a4c56a4ba9d2b4165865
+>>>>>>> scene3_new:Assets/Sprites/Scene3/haus_button_normal.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

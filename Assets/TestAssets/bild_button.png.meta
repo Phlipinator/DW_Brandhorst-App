@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d77b2572de37d0c4e8343d046b9da406
+<<<<<<< HEAD:Assets/TestAssets/bild_button.png.meta
+guid: 70ddcbecf966d4503a4b6950f4b0cf5d
+=======
+guid: 860fbfb1859d44a9288ee4054272eac7
+>>>>>>> scene3_new:Assets/Sprites/Scene3/12.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

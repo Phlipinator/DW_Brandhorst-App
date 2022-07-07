@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: c72d468ec23d04c45b35a295d6ef56a4
+<<<<<<< HEAD:Assets/TestAssets/arrow_button_normal.png.meta
+guid: 8a55796d8f78847d8af4e72f9500bbd5
+=======
+guid: 0c488c3030d4b494f8a3c6adff9294de
+>>>>>>> scene3_new:Assets/Sprites/Scene3/arrow_button_normal.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

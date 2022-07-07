@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d7ee0cb90797ff844862854b4cfe4b45
+<<<<<<< HEAD:Assets/TestAssets/achivments_normal.png.meta
+guid: a3f9e1bf7845c4ae8a19e23b5396f6a4
+=======
+guid: d03850525519f42ceafe5dc45f26292a
+>>>>>>> scene3_new:Assets/Sprites/Scene3/10.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
