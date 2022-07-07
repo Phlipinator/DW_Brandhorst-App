@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5d122877468828a4caa6425ff4cb91c6
+=======
+guid: b1be88c6db3676141a7fe444f9203eb3
+>>>>>>> QR-Scanner
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

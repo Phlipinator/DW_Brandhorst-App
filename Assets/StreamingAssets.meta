@@ -1,6 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/StreamingAssets.meta
 guid: f40808b3224819a45aa03b1a4fc60eca
 folderAsset: yes
+=======
+guid: b983c7f31a9427a4e9ae06799e399ba0
+>>>>>>> QR-Scanner:Assets/Scenes/TestStart.unity.meta
+=======
+guid: cbf36045a06d17f4387f0a4c79b8bcb9
+folderAsset: yes
+>>>>>>> QR-Scanner
 DefaultImporter:
   externalObjects: {}
   userData: 
