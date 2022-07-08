@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Adaptive Performance/Provider.meta
 guid: 7cfc1480499db494c822cb10b41ffa22
 folderAsset: yes
@@ -10,6 +11,14 @@ guid: b85d8f843246d1d48990ffcbd474c472
 guid: 64549294f17f544499b539bfaf77d17e
 folderAsset: yes
 >>>>>>> QR-Scanner
+=======
+<<<<<<<< HEAD:Assets/Adaptive Performance/Provider.meta
+guid: 763d9347798af0e44b843f6586d6ea73
+folderAsset: yes
+========
+guid: 723be4990d1f5434f946882f629ceef8
+>>>>>>>> scene6:Assets/Scenes/3_Detail-Challenges.unity.meta
+>>>>>>> scene6
 DefaultImporter:
   externalObjects: {}
   userData: 

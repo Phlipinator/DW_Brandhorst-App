@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:editor="UnityEditor.UIElements" xmlns:engine="UnityEngine.UIElements" xmlns="UnityEditor.Overlays" elementFormDefault="qualified" targetNamespace="UnityEditor.Experimental.GraphView" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
+<<<<<<< HEAD
   <xs:complexType name="ResizableElementType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
           <xs:element ref="engine:VisualElement" />
         </xs:sequence>
+=======
+  <xs:complexType name="PillType">
+    <xs:complexContent mixed="false">
+      <xs:restriction base="engine:VisualElementType">
+>>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
@@ -17,12 +23,22 @@
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
+<<<<<<< HEAD
+=======
+        <xs:attribute default="false" name="highlighted" type="xs:boolean" use="optional" />
+        <xs:attribute default="" name="text" type="xs:string" use="optional" />
+>>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:element name="ResizableElement" substitutionGroup="engine:VisualElement" xmlns:q1="UnityEditor.Experimental.GraphView" type="q1:ResizableElementType" />
   <xs:complexType name="StickyNoteType">
+=======
+  <xs:element name="Pill" substitutionGroup="engine:VisualElement" xmlns:q1="UnityEditor.Experimental.GraphView" type="q1:PillType" />
+  <xs:complexType name="ResizableElementType">
+>>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -42,10 +58,20 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:element name="StickyNote" substitutionGroup="engine:VisualElement" xmlns:q2="UnityEditor.Experimental.GraphView" type="q2:StickyNoteType" />
   <xs:complexType name="PillType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
+=======
+  <xs:element name="ResizableElement" substitutionGroup="engine:VisualElement" xmlns:q2="UnityEditor.Experimental.GraphView" type="q2:ResizableElementType" />
+  <xs:complexType name="StickyNoteType">
+    <xs:complexContent mixed="false">
+      <xs:restriction base="engine:VisualElementType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="engine:VisualElement" />
+        </xs:sequence>
+>>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
@@ -56,11 +82,18 @@
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
+<<<<<<< HEAD
         <xs:attribute default="false" name="highlighted" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="text" type="xs:string" use="optional" />
+=======
+>>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:element name="Pill" substitutionGroup="engine:VisualElement" xmlns:q3="UnityEditor.Experimental.GraphView" type="q3:PillType" />
+=======
+  <xs:element name="StickyNote" substitutionGroup="engine:VisualElement" xmlns:q3="UnityEditor.Experimental.GraphView" type="q3:StickyNoteType" />
+>>>>>>> scene6
 </xs:schema>

@@ -1,10 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Sprites/Pics_Challenges.meta
 guid: b0f57c74f559142ecb202daa5f6612be
 folderAsset: yes
 =======
 guid: d721b0ca812027449b2014bee38057bb
 >>>>>>> QR-Scanner:Assets/Scenes/Test2.unity.meta
+=======
+guid: 2dec779f97d9f0a4196604a85eee88a2
+folderAsset: yes
+>>>>>>> scene6
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: f71717d8728172f4bab53600f91a47db
 =======
 guid: 8fef49b8a752b5547a8c0f9edd3368a9
 >>>>>>> QR-Scanner
+=======
+guid: da5f3043abf39674391d7a29cd43c4b6
+>>>>>>> scene6
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

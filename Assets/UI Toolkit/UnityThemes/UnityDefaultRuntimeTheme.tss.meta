@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a9a3d7ff69b5f854cac843079fd706fd
+=======
+guid: 2b09ae171f5095f4290f6788a3518563
+>>>>>>> scene6
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}

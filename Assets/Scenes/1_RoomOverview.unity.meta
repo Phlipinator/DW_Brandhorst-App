@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: 9eb56310f7f13483cb5858cd7e047b32
+<<<<<<< HEAD:Assets/Scenes/1_RoomOverview.unity.meta
+guid: bcb09b67a318b4e63bf1cb733931061b
+=======
+guid: 1decd29d568980b4b9e4f5a706efdfb3
+folderAsset: yes
+>>>>>>> scene6:Assets/Resources.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

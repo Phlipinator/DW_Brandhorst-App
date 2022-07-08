@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:editor="UnityEditor.UIElements" xmlns:engine="UnityEngine.UIElements" xmlns="UnityEditor.Overlays" elementFormDefault="qualified" targetNamespace="Unity.Profiling.Editor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
+<<<<<<< HEAD
   <xs:complexType name="MemoryUsageBreakdownElementType">
+=======
+  <xs:complexType name="BackgroundPatternType">
+>>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
@@ -14,6 +18,7 @@
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
+<<<<<<< HEAD
         <xs:attribute default="Other" name="text" type="xs:string" use="optional" />
         <xs:attribute default="" name="background-color-class" type="xs:string" use="optional" />
         <xs:attribute default="false" name="show-used" type="xs:boolean" use="optional" />
@@ -21,14 +26,27 @@
         <xs:attribute default="100" name="total-bytes" type="xs:long" use="optional" />
         <xs:attribute default="false" name="show-selected" type="xs:boolean" use="optional" />
         <xs:attribute default="0" name="selected-bytes" type="xs:long" use="optional" />
+=======
+        <xs:attribute default="1" name="scale" type="xs:float" use="optional" />
+>>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:element name="MemoryUsageBreakdownElement" substitutionGroup="engine:VisualElement" xmlns:q1="Unity.Profiling.Editor" type="q1:MemoryUsageBreakdownElementType" />
   <xs:complexType name="BackgroundPatternType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
+=======
+  <xs:element name="BackgroundPattern" substitutionGroup="engine:VisualElement" xmlns:q1="Unity.Profiling.Editor" type="q1:BackgroundPatternType" />
+  <xs:complexType name="MemoryUsageBreakdownType">
+    <xs:complexContent mixed="false">
+      <xs:restriction base="engine:VisualElementType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:element xmlns:q2="Unity.Profiling.Editor" ref="q2:MemoryUsageBreakdownElement" />
+        </xs:sequence>
+>>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
@@ -39,11 +57,19 @@
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
+<<<<<<< HEAD
         <xs:attribute default="1" name="scale" type="xs:float" use="optional" />
+=======
+        <xs:attribute default="Memory Usage" name="header-text" type="xs:string" use="optional" />
+        <xs:attribute default="1288490240" name="total-bytes" type="xs:int" use="optional" />
+        <xs:attribute default="false" name="show-unknown" type="xs:boolean" use="optional" />
+        <xs:attribute default="Unknown" name="unknown-name" type="xs:string" use="optional" />
+>>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:element name="BackgroundPattern" substitutionGroup="engine:VisualElement" xmlns:q2="Unity.Profiling.Editor" type="q2:BackgroundPatternType" />
   <xs:complexType name="MemoryUsageBreakdownType">
     <xs:complexContent mixed="false">
@@ -51,6 +77,12 @@
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
           <xs:element xmlns:q3="Unity.Profiling.Editor" ref="q3:MemoryUsageBreakdownElement" />
         </xs:sequence>
+=======
+  <xs:element name="MemoryUsageBreakdown" substitutionGroup="engine:VisualElement" xmlns:q3="Unity.Profiling.Editor" type="q3:MemoryUsageBreakdownType" />
+  <xs:complexType name="MemoryUsageBreakdownElementType">
+    <xs:complexContent mixed="false">
+      <xs:restriction base="engine:VisualElementType">
+>>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
@@ -61,15 +93,29 @@
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
+<<<<<<< HEAD
         <xs:attribute default="Memory Usage" name="header-text" type="xs:string" use="optional" />
         <xs:attribute default="1288490240" name="total-bytes" type="xs:int" use="optional" />
         <xs:attribute default="false" name="show-unknown" type="xs:boolean" use="optional" />
         <xs:attribute default="Unknown" name="unknown-name" type="xs:string" use="optional" />
+=======
+        <xs:attribute default="Other" name="text" type="xs:string" use="optional" />
+        <xs:attribute default="" name="background-color-class" type="xs:string" use="optional" />
+        <xs:attribute default="false" name="show-used" type="xs:boolean" use="optional" />
+        <xs:attribute default="50" name="used-bytes" type="xs:long" use="optional" />
+        <xs:attribute default="100" name="total-bytes" type="xs:long" use="optional" />
+        <xs:attribute default="false" name="show-selected" type="xs:boolean" use="optional" />
+        <xs:attribute default="0" name="selected-bytes" type="xs:long" use="optional" />
+>>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:element name="MemoryUsageBreakdown" substitutionGroup="engine:VisualElement" xmlns:q4="Unity.Profiling.Editor" type="q4:MemoryUsageBreakdownType" />
+=======
+  <xs:element name="MemoryUsageBreakdownElement" substitutionGroup="engine:VisualElement" xmlns:q4="Unity.Profiling.Editor" type="q4:MemoryUsageBreakdownElementType" />
+>>>>>>> scene6
   <xs:complexType name="SelectableLabelType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">

@@ -16,10 +16,14 @@ MonoBehaviour:
   m_AutomaticRunning: 0
   m_Loaders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 11400000, guid: f71717d8728172f4bab53600f91a47db, type: 2}
 =======
   - {fileID: 11400000, guid: 8fef49b8a752b5547a8c0f9edd3368a9, type: 2}
 >>>>>>> QR-Scanner
+=======
+  - {fileID: 11400000, guid: da5f3043abf39674391d7a29cd43c4b6, type: 2}
+>>>>>>> scene6
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 2
