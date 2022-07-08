@@ -41,14 +41,15 @@ public class QRCodeReader : MonoBehaviour
         {
             if (QRText == PersistentManagerScript.Instance.artworkID)
             {
-                deinitialiseCam();
+                PersistentManagerScript.Instance._cameraTexture.Stop();
                 // This needs to be cahanged to goToSixt
                 sceneChanger.goToFirst();
             }
             else
             {   
-                //doScanning needs to be set to true again
+                //doScanning gets set to true by clicking the pop-up
                 failScreen.SetActive(true);
+                
             }
             
         }
@@ -61,11 +62,6 @@ public class QRCodeReader : MonoBehaviour
         PersistentManagerScript.Instance._cameraTexture.Play();
         _rawImageBackground.texture = PersistentManagerScript.Instance._cameraTexture;
         _isCamAvailible = true;
-    }
-
-    private void deinitialiseCam()
-    {
-        PersistentManagerScript.Instance._cameraTexture.Stop();
     }
 
     //Fixes warping issues
@@ -95,6 +91,7 @@ public class QRCodeReader : MonoBehaviour
                 QRText = result.Text;
                 //This stops the Scanning one a result has been detected
                 PersistentManagerScript.Instance.doScanning = false;
+                result = null;
             }
            
         }

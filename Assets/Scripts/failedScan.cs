@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class failedScan : MonoBehaviour
 {
-    public GameObject button;
 
-    public void backtoScanning()
+    private void OnMouseDown()
     {
-        button.SetActive(false);
+        gameObject.SetActive(false);
+        PersistentManagerScript.Instance.doScanning = true;
     }
 }
