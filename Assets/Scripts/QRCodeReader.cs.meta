@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/QRCodeReader.cs.meta
+guid: b46957790d82c4d8bbcc1c873ce4782b
+=======
+guid: c270ea0c10a82484b939afdbf9fa3cd8
+>>>>>>> scene3_new:Assets/UIComponents/Scene3.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

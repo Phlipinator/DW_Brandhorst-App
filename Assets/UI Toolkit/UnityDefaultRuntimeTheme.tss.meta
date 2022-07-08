@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/UI Toolkit/UnityDefaultRuntimeTheme.tss.meta
+guid: 762ef6fee70074be49f389bd31155c58
+=======
+guid: 95ce4b8b961604378af0782ea6f917b5
+>>>>>>> scene3_new:Assets/UIComponents/Scene3_overview.uxml.meta
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+<<<<<<< HEAD:Assets/UI Toolkit/UnityDefaultRuntimeTheme.tss.meta
+  script: {fileID: 12388, guid: 0000000000000000e000000000000000, type: 0}
+  disableValidation: 0
+=======
+  script: {fileID: 13804, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> scene3_new:Assets/UIComponents/Scene3_overview.uxml.meta

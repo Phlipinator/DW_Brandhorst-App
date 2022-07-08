@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Adaptive Performance/Provider.meta
+guid: 7cfc1480499db494c822cb10b41ffa22
+folderAsset: yes
+========
+guid: b85d8f843246d1d48990ffcbd474c472
+>>>>>>>> QR-Scanner:Assets/Scenes/4_QR-Scanner.unity.meta
+=======
+guid: 64549294f17f544499b539bfaf77d17e
+folderAsset: yes
+>>>>>>> QR-Scanner
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
