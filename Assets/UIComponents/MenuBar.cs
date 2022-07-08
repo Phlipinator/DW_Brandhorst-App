@@ -25,6 +25,7 @@ public class MenuBar : MonoBehaviour
             middle.style.backgroundImage = new StyleBackground(scannerIcon);
             middle.clicked += () =>
             {
+                sceneChange.goToFourth();
                 //Entweder Scanner öffnet sich oder man kommt zur Trophy Übersicht
                 Debug.Log("Middle");
             };
@@ -33,6 +34,7 @@ public class MenuBar : MonoBehaviour
         {
             middle.clicked += () =>
             {
+                
                 //Entweder Scanner öffnet sich oder man kommt zur Trophy Übersicht
                 Debug.Log("Middle");
             };

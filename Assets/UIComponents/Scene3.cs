@@ -28,7 +28,7 @@ public class Scene3 : MonoBehaviour
         //einfach derweil mal ignorieren ###
         var root = this.GetComponent<UIDocument>().rootVisualElement;
         var view = root.Q<VisualElement>("view");
-        Button scanButton = view.Q<Button>("button_scan");
+        //Button scanButton = view.Q<Button>("button_scan");
         var content = view.Q<VisualElement>("content");
 
         var segmentButtonTimer1 = content.Q("Hint1").Q("root").Q<VisualElement>("segment_button_timer");
@@ -77,14 +77,11 @@ public class Scene3 : MonoBehaviour
         }
 
         //zum Szene wechseln in Scene4 (QR-Code scanner)
-        scanButton.clicked += () =>
-        {
-            sceneChange.goToFourth();
-            Debug.Log("clicked");
-        };
-
-
-
+        //scanButton.clicked += () =>
+        //{
+          //  sceneChange.goToFourth();
+          //  Debug.Log("clicked");
+        //};
 
         //Zeigen Tipps an:
         hintButton1.clicked += () =>
