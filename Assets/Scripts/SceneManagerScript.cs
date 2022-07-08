@@ -38,6 +38,7 @@ public class SceneManagerScript : MonoBehaviour
 
     public void goToFourth()
     {
+        PersistentManagerScript.Instance.doScanning = true;
         PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("4_QR-Scanner");
     }

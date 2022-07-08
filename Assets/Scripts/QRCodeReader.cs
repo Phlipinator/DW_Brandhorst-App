@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ZXing;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QRCodeReader : MonoBehaviour
 {
@@ -12,22 +13,17 @@ public class QRCodeReader : MonoBehaviour
     private AspectRatioFitter _aspectRatioFitter;
 
     private bool _isCamAvailible;
-    private WebCamTexture _cameraTexture;
+    //private WebCamTexture _cameraTexture;
 
-    public GameObject sucessScreen;
     public GameObject failScreen;
+    public SceneManagerScript sceneChanger;
 
-    //maybe this bool needs to be set to false again for every new scan
-    public bool success = false;
     private string QRText;
-
-
     void Start()
     {
         //Initialises cam
         SetUpCamera();
         //Makes both screens invisible by default
-        sucessScreen.SetActive(false);
         failScreen.SetActive(false);
     }
 
@@ -37,7 +33,7 @@ public class QRCodeReader : MonoBehaviour
         UpdateCameraRender();
 
         //Only does Scans when there is not a result
-        if (!success)
+        if (PersistentManagerScript.Instance.doScanning)
         {
             Scan();
         }
@@ -45,11 +41,14 @@ public class QRCodeReader : MonoBehaviour
         {
             if (QRText == PersistentManagerScript.Instance.artworkID)
             {
-                sucessScreen.SetActive(true);
+                deinitialiseCam();
+                // This needs to be cahanged to goToSixt
+                sceneChanger.goToFirst();
             }
             else
-            {
-                failScreen.SetActive(false);
+            {   
+                //doScanning needs to be set to true again
+                failScreen.SetActive(true);
             }
             
         }
@@ -58,10 +57,15 @@ public class QRCodeReader : MonoBehaviour
     //Initialises cam, DO NOT TOUCH
     private void SetUpCamera()
     {
-        _cameraTexture = new WebCamTexture();
-        _cameraTexture.Play();
-        _rawImageBackground.texture = _cameraTexture;
+        PersistentManagerScript.Instance._cameraTexture = new WebCamTexture();
+        PersistentManagerScript.Instance._cameraTexture.Play();
+        _rawImageBackground.texture = PersistentManagerScript.Instance._cameraTexture;
         _isCamAvailible = true;
+    }
+
+    private void deinitialiseCam()
+    {
+        PersistentManagerScript.Instance._cameraTexture.Stop();
     }
 
     //Fixes warping issues
@@ -71,10 +75,10 @@ public class QRCodeReader : MonoBehaviour
         {
             return;
         }
-        float ratio = (float)_cameraTexture.width / (float)_cameraTexture.height;
+        float ratio = (float)PersistentManagerScript.Instance._cameraTexture.width / (float)PersistentManagerScript.Instance._cameraTexture.height;
         _aspectRatioFitter.aspectRatio = ratio;
 
-        int orientation = -_cameraTexture.videoRotationAngle;
+        int orientation = -PersistentManagerScript.Instance._cameraTexture.videoRotationAngle;
         _rawImageBackground.rectTransform.localEulerAngles = new Vector3(0, 0, orientation);
     }
 
@@ -85,13 +89,12 @@ public class QRCodeReader : MonoBehaviour
         try
         {
             IBarcodeReader barcodeReader = new BarcodeReader();
-            Result result = barcodeReader.Decode(_cameraTexture.GetPixels32(), _cameraTexture.width, _cameraTexture.height);
+            Result result = barcodeReader.Decode(PersistentManagerScript.Instance._cameraTexture.GetPixels32(), PersistentManagerScript.Instance._cameraTexture.width, PersistentManagerScript.Instance._cameraTexture.height);
             if (result != null)
             {
                 QRText = result.Text;
                 //This stops the Scanning one a result has been detected
-                success = true;
-                
+                PersistentManagerScript.Instance.doScanning = false;
             }
            
         }

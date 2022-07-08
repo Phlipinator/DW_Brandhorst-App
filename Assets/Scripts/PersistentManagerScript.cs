@@ -11,6 +11,14 @@ public class PersistentManagerScript : MonoBehaviour
     public string artworkID;
     public string roomID;
     public List<string> sceneHistory;
+    public bool doScanning;
+
+    public WebCamTexture _cameraTexture;
+
+    private void Start()
+    {
+        doScanning = true;
+    }
 
     //Singleton behaviour, do not touch!
     private void Awake()

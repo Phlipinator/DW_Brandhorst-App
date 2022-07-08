@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/1_1_Start.unity
+    guid: ac33b281ddcc9438b8b81054256928a2
+  - enabled: 1
+    path: Assets/Scenes/1_RoomOverview.unity
+    guid: bcb09b67a318b4e63bf1cb733931061b
+  - enabled: 1
+    path: Assets/Scenes/2_Challenges.unity
+    guid: 92b86630794fb4e0e9cdb895f3cd4fd6
+  - enabled: 1
+    path: Assets/Scenes/3_Detail-Challenges.unity
+    guid: 8506c266273554f089336bc098cee286
+  - enabled: 1
+    path: Assets/Scenes/4_QR-Scanner.unity
+    guid: a965022ddc442443db91257529a020cc
+  - enabled: 1
+    path: Assets/Scenes/6_Trophies.unity
+    guid: ad2e000f36a0c5749a7aebd0ce6991d3
   m_configObjects: {}

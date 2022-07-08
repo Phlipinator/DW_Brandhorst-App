@@ -42,27 +42,24 @@ public class MenuBar : MonoBehaviour
        
         back.clicked += () =>
         {
-            //Szene zurück
+            if(SceneManager.GetActiveScene().name == "4_QR-Scanner")
+            {
+                PersistentManagerScript.Instance._cameraTexture.Stop();
+            }
+            sceneChange.goBack();
             Debug.Log("zurück");
         };
 
         home.clicked += () =>
         {
+            if (SceneManager.GetActiveScene().name == "4_QR-Scanner")
+            {
+                PersistentManagerScript.Instance._cameraTexture.Stop();
+            }
             Debug.Log("Zurück zur Raumübersicht");
             sceneChange.goToFirst();
         };
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Checke ob in Szene3, wenn ja tausche den Middle Button aus (Trophy durch Scanner)
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
