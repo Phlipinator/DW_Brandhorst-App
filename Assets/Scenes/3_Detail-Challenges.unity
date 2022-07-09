@@ -408,5 +408,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79cad6a4128343f3b84e2ca9eaa1a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scannerIcon: {fileID: 2800000, guid: 94f835e05ee7c4f1facdd8cb178fdfb2, type: 3}
+  exchangeIcon: {fileID: 2800000, guid: 802f457c131f447a08ab3217bb5c6cc1, type: 3}
   sceneChange: {fileID: 518812156}

@@ -400,3 +400,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79cad6a4128343f3b84e2ca9eaa1a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exchangeIcon: {fileID: 2800000, guid: 5325c8fe97c814e828b190148c3b2dbd, type: 3}
+  sceneChange: {fileID: 659513613}

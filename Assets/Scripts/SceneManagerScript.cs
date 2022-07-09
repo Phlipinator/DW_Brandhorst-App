@@ -46,7 +46,7 @@ public class SceneManagerScript : MonoBehaviour
     public void goToSixt()
     {
         PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("Test2");
+        SceneManager.LoadScene("6_Trophies");
     }
 
     //For questions ask Philipp Thalhammer
