@@ -11,12 +11,14 @@ public class PersistentManagerScript : MonoBehaviour
     public string artworkID;
     public string roomID;
     public List<string> sceneHistory;
-    public bool doScanning;
 
+    public bool doScanning;
     public WebCamTexture _cameraTexture;
+    public List<string> unlockedArtworks;
 
     private void Start()
     {
+        //initialises the Scanning process
         doScanning = true;
     }
 

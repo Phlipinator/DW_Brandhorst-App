@@ -41,6 +41,8 @@ public class QRCodeReader : MonoBehaviour
         {
             if (QRText == PersistentManagerScript.Instance.artworkID)
             {
+                //Adds the unlocked Artwork to a List
+                PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
                 PersistentManagerScript.Instance._cameraTexture.Stop();
                 // This needs to be cahanged to goToSixt
                 sceneChanger.goToFirst();
