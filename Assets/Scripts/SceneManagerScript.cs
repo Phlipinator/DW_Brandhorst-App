@@ -29,7 +29,7 @@ public class SceneManagerScript : MonoBehaviour
     }
 
     //artworkID can be passed with this function to make sure the right artwork is displayed
-    public void goToThird(string artworkID)
+    public void goToThird(int artworkID)
     {
         PersistentManagerScript.Instance.artworkID = artworkID;
         PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
@@ -41,6 +41,13 @@ public class SceneManagerScript : MonoBehaviour
         PersistentManagerScript.Instance.doScanning = true;
         PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("4_QR-Scanner");
+    }
+
+    public void goToFifth(int artID)
+    {
+        PersistentManagerScript.Instance.artworkID = artID;
+        PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("5_Info-Screens");
     }
 
     public void goToSixt()

@@ -21,6 +21,10 @@ public class QRCodeReader : MonoBehaviour
     private string QRText;
     void Start()
     {
+        //uncomment to test without scanning
+        //PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
+        //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
+
         //Initialises cam
         SetUpCamera();
         //Makes both screens invisible by default
@@ -39,11 +43,13 @@ public class QRCodeReader : MonoBehaviour
         }
         else
         {
-            if (QRText == PersistentManagerScript.Instance.artworkID)
+            if (QRText == "art" + PersistentManagerScript.Instance.artworkID.ToString())
             {
+                //Adds the unlocked Artwork to a List
+                PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
                 PersistentManagerScript.Instance._cameraTexture.Stop();
-                // This needs to be cahanged to goToSixt
-                sceneChanger.goToFirst();
+                // or goToSixt, if we want to show Tropy overview
+                sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
             }
             else
             {   

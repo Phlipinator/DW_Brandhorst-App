@@ -8,15 +8,38 @@ public class PersistentManagerScript : MonoBehaviour
     //THIS SCRIPT NEEDS SHOULD NOT BE TOUCHED; AS IT ONLY NEEDS TO EXIST IN THE FIRST SCENE
     public static PersistentManagerScript Instance { get; private set;}
 
-    public string artworkID;
+    public int artworkID;
     public string roomID;
     public List<string> sceneHistory;
     public bool doScanning;
-
     public WebCamTexture _cameraTexture;
+    public List<int> unlockedArtworks;
+    public List<Art> exhibition;
+
+    public enum Room
+    {
+        Room1,
+        Room2,
+        Room3
+    }
+
+    //Set all art pieces of the exhibition
+    public void defineExhibition()
+    {
+        exhibition = new List<Art>();
+        exhibition.Add(new Art(2, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+        exhibition.Add(new Art(3, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+        exhibition.Add(new Art(4, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+        exhibition.Add(new Art(5, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+        exhibition.Add(new Art(6, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+        exhibition.Add(new Art(7, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+        exhibition.Add(new Art(8, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+        exhibition.Add(new Art(9, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+    }
 
     private void Start()
     {
+        //initialises the Scanning process
         doScanning = true;
     }
 
@@ -27,6 +50,8 @@ public class PersistentManagerScript : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            defineExhibition();
         }
         else
         {
@@ -61,6 +86,22 @@ public class PersistentManagerScript : MonoBehaviour
         return lastScene;
 
         
+    }
+
+    public Art getArtByID(int id)
+    {
+        if (exhibition == null)
+        {
+            defineExhibition();
+        }
+        Art art = exhibition.Find(item => item.getID() == id);
+        Debug.Log("art");
+        Debug.Log(art);
+        if (art != null) // check item isn't null
+        {
+            return art;
+        }
+        return null;
     }
 
     //For questions ask Philipp Thalhammer

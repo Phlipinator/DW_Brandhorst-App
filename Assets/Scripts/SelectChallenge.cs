@@ -23,7 +23,7 @@ public class SelectChallenge : MonoBehaviour
         art1.clicked += () =>
         {
             //artID aktualisieren aus der Liste
-            sceneChange.goToThird("art1");
+            sceneChange.goToThird(2);
             //Szene wechseln
             
             Debug.Log("1clicked");
@@ -31,55 +31,44 @@ public class SelectChallenge : MonoBehaviour
 
         art2.clicked += () =>
         {
-            sceneChange.goToThird("art2");
+            sceneChange.goToThird(3);
             Debug.Log("2clicked");
         };
 
         art3.clicked += () =>
         {
-            sceneChange.goToThird("art3");
+            sceneChange.goToThird(4);
             Debug.Log("3clicked");
         };
 
         art4.clicked += () =>
         {
-            sceneChange.goToThird("art4");
+            sceneChange.goToThird(5);
             Debug.Log("4clicked");
         };
 
         art5.clicked += () =>
         {
-            sceneChange.goToThird("art5");
+            sceneChange.goToThird(6);
             Debug.Log("5clicked");
         };
 
         art6.clicked += () =>
         {
-            sceneChange.goToThird("art6");
+            sceneChange.goToThird(7);
             Debug.Log("6clicked");
         };
 
         art7.clicked += () =>
         {
-            sceneChange.goToThird("art7");
+            sceneChange.goToThird(8);
             Debug.Log("7clicked");
         };
 
         art8.clicked += () =>
         {
-            sceneChange.goToThird("art8");
+            sceneChange.goToThird(9);
             Debug.Log("8clicked");
         };
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Debug.Log("Hi");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

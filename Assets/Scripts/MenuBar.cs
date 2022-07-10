@@ -55,7 +55,7 @@ public class MenuBar : MonoBehaviour
                 break;
             case 5:
                 //Info Text
-                middle.style.backgroundImage = new StyleBackground(exchangeIcon); //has to be removed when scene5 is merged!!!
+                //middle.style.backgroundImage = new StyleBackground(exchangeIcon); //has to be removed when scene5 is merged!!!
                 middle.clicked += () =>
                 {
                     //Go to Trophy

@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class Scene3 : MonoBehaviour
 {
+    /*
     public Texture2D img01;
     public Texture2D img02;
     public Texture2D img03;
@@ -14,6 +15,7 @@ public class Scene3 : MonoBehaviour
     public Texture2D img06;
     public Texture2D img07;
     public Texture2D img08;
+    */
     public SceneManagerScript sceneChange;
 
     // Start is called before the first frame update
@@ -44,6 +46,11 @@ public class Scene3 : MonoBehaviour
         var artworkThumbnail = content.Q<VisualElement>("artwork_thumbnail");
         //###
 
+        //set art background image
+        int artID = PersistentManagerScript.Instance.artworkID;
+        var sprite = Resources.Load<Texture2D>("Sprites/thumbnails/" + artID.ToString());
+        artworkThumbnail.style.backgroundImage = sprite;
+        /*
         //also change Tips? 
         switch (PersistentManagerScript.Instance.artworkID)
         {
@@ -75,6 +82,7 @@ public class Scene3 : MonoBehaviour
                 Debug.Log("Error");
                 break;
         }
+        */
 
         //zum Szene wechseln in Scene4 (QR-Code scanner)
         //scanButton.clicked += () =>
@@ -89,7 +97,7 @@ public class Scene3 : MonoBehaviour
             Debug.Log("Hint button 1 clicked");
             segmentButtonTimer1.style.display = DisplayStyle.None;
             segmentHint1.style.display = DisplayStyle.Flex;
-            artworkThumbnail.style.backgroundImage = new StyleBackground(img02);
+            //artworkThumbnail.style.backgroundImage = new StyleBackground(img02);
 
         };
 
@@ -99,11 +107,5 @@ public class Scene3 : MonoBehaviour
             segmentButtonTimer2.style.display = DisplayStyle.None;
             segmentHint2.style.display = DisplayStyle.Flex;
         };
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
