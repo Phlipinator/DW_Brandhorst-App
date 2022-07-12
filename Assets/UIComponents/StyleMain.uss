@@ -12,6 +12,14 @@
 .menu-button {
 	width: 210px;
 	height: 210px;
-	background-color: none;
 	border-width: 0;
+}
+
+.room-challenges {
+	margin-left: 50px;
+	margin-right: 0;
+	margin-top:  60px;
+	margin-bottom: 81px;
+	width: 348px;
+	height: 453px;
 }

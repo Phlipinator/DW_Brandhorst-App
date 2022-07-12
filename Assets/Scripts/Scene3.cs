@@ -48,7 +48,7 @@ public class Scene3 : MonoBehaviour
 
         //set art background image
         int artID = PersistentManagerScript.Instance.artworkID;
-        var sprite = Resources.Load<Texture2D>("Sprites/thumbnails/" + artID.ToString());
+        var sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToLargeImages + artID.ToString());
         artworkThumbnail.style.backgroundImage = sprite;
         /*
         //also change Tips? 

@@ -7,11 +7,11 @@ public class Art
     private int id;
     private string author;
     private string year;
-    private string room;
+    private Room room;
     private string description;
     private List<string> tips;
 
-    public Art(int id, string author, string year, string room, string description, List<string> tips)
+    public Art(int id, string author, string year, Room room, string description, List<string> tips)
     {
         this.id = id;
         this.author = author;
@@ -36,7 +36,7 @@ public class Art
         return year;
     }
 
-    public string getRoom()
+    public Room getRoom()
     {
         return room;
     }

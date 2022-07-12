@@ -21,7 +21,7 @@ public class SceneManagerScript : MonoBehaviour
     }
 
     //roomID can be passed with this function to make sure the right artwork is displayed
-    public void goToSecond(string roomID)
+    public void goToSecond(Room roomID)
     {
         PersistentManagerScript.Instance.roomID = roomID;
         PersistentManagerScript.Instance.addSceneToHistory(SceneManager.GetActiveScene().name);

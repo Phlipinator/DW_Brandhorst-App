@@ -1,74 +1,47 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using System.IO;
 
 public class SelectChallenge : MonoBehaviour
 {
     public SceneManagerScript sceneChange;
     void Awake()
     {
-        //get Buttons of each Challenge
-        var root = this.GetComponent<UIDocument>().rootVisualElement;
-        Button art1 = root.Q<Button>("Art1");
-        Button art2 = root.Q<Button>("Art2");
-        Button art3 = root.Q<Button>("Art3");
-        Button art4 = root.Q<Button>("Art4");
-        Button art5 = root.Q<Button>("Art5");
-        Button art6 = root.Q<Button>("Art6");
-        Button art7 = root.Q<Button>("Art7");
-        Button art8 = root.Q<Button>("Art8");
+        Room room = PersistentManagerScript.Instance.roomID;
 
-        art1.clicked += () =>
-        {
-            //artID aktualisieren aus der Liste
-            sceneChange.goToThird(2);
-            //Szene wechseln
-            
-            Debug.Log("1clicked");
-        };
+        var root = GetComponent<UIDocument>().rootVisualElement;
+        VisualElement roomName = root.Q<VisualElement>("RoomName");
+        VisualElement challangeList = root.Q<VisualElement>("challangeView");
+        Texture2D sprite;
+        int id;
 
-        art2.clicked += () =>
-        {
-            sceneChange.goToThird(3);
-            Debug.Log("2clicked");
-        };
+        sprite = Resources.Load<Texture2D>("Sprites/title/" + room.ToString());
+        roomName.style.backgroundImage = sprite;
 
-        art3.clicked += () =>
-        {
-            sceneChange.goToThird(4);
-            Debug.Log("3clicked");
-        };
+        List<Art> artInRoom = PersistentManagerScript.Instance.getArtByRoom(room);
 
-        art4.clicked += () =>
+        for (var i = 0; i < artInRoom.Count; i++)
         {
-            sceneChange.goToThird(5);
-            Debug.Log("4clicked");
-        };
+            id = artInRoom[i].getID();
+            ArtButton elem = new ArtButton();
+            elem.name = "art" + id.ToString();
+            elem.setArtID(id.ToString());
+            elem.RemoveFromClassList("unity-button");
+            elem.AddToClassList("image-list-element");
+            sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + id.ToString());
+            elem.style.backgroundImage = sprite;
 
-        art5.clicked += () =>
-        {
-            sceneChange.goToThird(6);
-            Debug.Log("5clicked");
-        };
+            elem.RegisterCallback<PointerUpEvent, string>(artClicked, elem.getArtID());
 
-        art6.clicked += () =>
-        {
-            sceneChange.goToThird(7);
-            Debug.Log("6clicked");
-        };
+            challangeList.Add(elem);
+        }
+    }
 
-        art7.clicked += () =>
-        {
-            sceneChange.goToThird(8);
-            Debug.Log("7clicked");
-        };
-
-        art8.clicked += () =>
-        {
-            sceneChange.goToThird(9);
-            Debug.Log("8clicked");
-        };
+    private void artClicked(PointerUpEvent _, string artID)
+    {
+        int id = Int32.Parse(artID);
+        PersistentManagerScript.Instance.artworkID = id;
+        sceneChange.goToThird(id);
     }
 }

@@ -4,8 +4,7 @@
     <ui:VisualElement name="root" style="flex-grow: 0; width: 100%; height: 100%;">
         <ui:VisualElement name="body" style="flex-grow: 1; width: 100%; background-color: rgb(226, 117, 69);">
             <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="content" style="height: 100%; width: auto;">
-                <ui:VisualElement name="trophyList" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-grow: 0; flex-wrap: wrap; padding-top: 555px; padding-bottom: 150px; align-items: stretch; justify-content: flex-start; height: 100%; padding-left: 95px;" />
-                <ui:VisualElement name="inner" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 114px; padding-right: 48px; padding-top: 555px; padding-bottom: 339px; width: 100%; height: auto;" />
+                <ui:VisualElement name="trophyList" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-grow: 0; flex-wrap: wrap; padding-top: 555px; padding-bottom: 339px; align-items: stretch; justify-content: flex-start; height: 100%; padding-left: 95px;" />
             </ui:ScrollView>
         </ui:VisualElement>
         <ui:VisualElement name="header" style="position: absolute; top: 0; width: 100%; height: 681px;">
@@ -15,5 +14,6 @@
                 <ui:Label tabindex="-1" text="Deine gefundenen Kunstwerke und Begriffe:" display-tooltip-when-elided="true" name="description" style="font-size: 50px; white-space: normal; -unity-text-align: upper-center; color: rgb(255, 255, 255);" />
             </ui:VisualElement>
         </ui:VisualElement>
+        <ui:VisualElement name="footer" style="background-image: url(&apos;project://database/Assets/Sprites/menu_bar_gradient.png?fileID=2800000&amp;guid=767253adf1d6f4266acd56a8d04e4c64&amp;type=3#menu_bar_gradient&apos;); width: 100%; height: 318px; background-color: rgba(255, 255, 255, 0.01); position: absolute; bottom: 0;" />
     </ui:VisualElement>
 </ui:UXML>

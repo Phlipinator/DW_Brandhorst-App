@@ -2,39 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
+
+public enum Room
+{
+    Erdgeschoss,
+    Untergeschoss
+}
 
 public class PersistentManagerScript : MonoBehaviour
 {
-    //THIS SCRIPT NEEDS SHOULD NOT BE TOUCHED; AS IT ONLY NEEDS TO EXIST IN THE FIRST SCENE
+    //THIS SCRIPT ONLY NEEDS TO EXIST IN THE FIRST SCENE
     public static PersistentManagerScript Instance { get; private set;}
 
     public int artworkID;
-    public string roomID;
+    public Room roomID = Room.Erdgeschoss;
     public List<string> sceneHistory;
     public bool doScanning;
     public WebCamTexture _cameraTexture;
     public List<int> unlockedArtworks;
     public List<Art> exhibition;
 
-    public enum Room
-    {
-        Room1,
-        Room2,
-        Room3
-    }
+    public string pathToThumbnails = "Sprites/thumbnails/";
+    //do we have large images?
+    public string pathToLargeImages = "Sprites/thumbnails/";
 
     //Set all art pieces of the exhibition
     public void defineExhibition()
     {
-        exhibition = new List<Art>();
-        exhibition.Add(new Art(2, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
-        exhibition.Add(new Art(3, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
-        exhibition.Add(new Art(4, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
-        exhibition.Add(new Art(5, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
-        exhibition.Add(new Art(6, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
-        exhibition.Add(new Art(7, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
-        exhibition.Add(new Art(8, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
-        exhibition.Add(new Art(9, "Testautor", "2005", "Erdgeschoss", "Beschreibung", new List<string> { "Tipp1", "Tipp2" }));
+        exhibition = new List<Art>
+        {
+            new Art(2, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(3, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(4, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(5, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(6, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(7, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(8, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(9, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(10, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(11, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(12, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(13, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(14, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(15, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            new Art(16, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" })
+        };
     }
 
     private void Start()
@@ -94,14 +107,12 @@ public class PersistentManagerScript : MonoBehaviour
         {
             defineExhibition();
         }
-        Art art = exhibition.Find(item => item.getID() == id);
-        Debug.Log("art");
-        Debug.Log(art);
-        if (art != null) // check item isn't null
-        {
-            return art;
-        }
-        return null;
+        return exhibition.Find(item => item.getID() == id);
+    }
+
+    public List<Art> getArtByRoom(Room room) {
+
+       return exhibition.Where(item => item.getRoom() == room).ToList();
     }
 
     //For questions ask Philipp Thalhammer

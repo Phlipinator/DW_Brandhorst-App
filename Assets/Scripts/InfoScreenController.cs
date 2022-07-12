@@ -16,7 +16,7 @@ public class InfoScreenController : MonoBehaviour
         Label artAuthor = root.Q<Label>("art_author");
         Label artDescription = root.Q<Label>("art_description");
 
-        var sprite = Resources.Load<Texture2D>("Sprites/thumbnails/" + artID.ToString());
+        var sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToLargeImages + artID.ToString());
         artImage.style.backgroundImage = sprite;
 
         artAuthor.text = art.getAuthor() + ", " + art.getYear(); 

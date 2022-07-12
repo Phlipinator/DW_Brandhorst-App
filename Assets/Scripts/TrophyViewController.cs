@@ -24,7 +24,7 @@ public class TrophyViewController : MonoBehaviour
             elem.setArtID(id.ToString());
             elem.RemoveFromClassList("unity-button");
             elem.AddToClassList("image-list-element");
-            sprite = Resources.Load<Texture2D>("Sprites/thumbnails/" + id);
+            sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + id.ToString());
             elem.style.backgroundImage = sprite;
 
             elem.RegisterCallback<PointerUpEvent, string>(artClicked, elem.getArtID());
