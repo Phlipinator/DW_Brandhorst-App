@@ -16,7 +16,7 @@ public class PersistentManagerScript : MonoBehaviour
     public static PersistentManagerScript Instance { get; private set;}
 
     public int artworkID;
-    public Room roomID = Room.Erdgeschoss;
+    public Room roomID;
     public List<string> sceneHistory;
     public bool doScanning;
     public WebCamTexture _cameraTexture;
@@ -110,9 +110,13 @@ public class PersistentManagerScript : MonoBehaviour
         return exhibition.Find(item => item.getID() == id);
     }
 
-    public List<Art> getArtByRoom(Room room) {
-
-       return exhibition.Where(item => item.getRoom() == room).ToList();
+    public List<Art> getArtByRoom(Room room)
+    {
+        if (exhibition == null)
+        {
+            defineExhibition();
+        }
+        return exhibition.Where(item => item.getRoom() == room).ToList();
     }
 
     //For questions ask Philipp Thalhammer
