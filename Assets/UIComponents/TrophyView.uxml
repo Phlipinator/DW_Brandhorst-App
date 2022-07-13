@@ -11,7 +11,7 @@
             <ui:VisualElement name="background" style="width: 100%; height: 100%; position: absolute; background-image: url(&apos;project://database/Assets/Sprites/Header%20(1).png?fileID=21300000&amp;guid=b305569bcf38e409ca35d0839dfe36c7&amp;type=3#Header (1)&apos;); opacity: 1;" />
             <ui:VisualElement name="inner" style="flex-grow: 1; background-image: none; padding-left: 129px; padding-right: 129px; padding-top: 105px; padding-bottom: 105px; align-items: center; opacity: 1;">
                 <ui:VisualElement name="title" style="padding-left: 0; padding-right: 0; width: 624px; height: 222px; background-image: url(&apos;project://database/Assets/Sprites/Asset%202.png?fileID=2800000&amp;guid=27765103abde55b49b1f0a60188d9228&amp;type=3#Asset 2&apos;); margin-bottom: 50px; display: flex; opacity: 0;" />
-                <ui:Label tabindex="-1" text="Deine gefundenen Kunstwerke und Begriffe:" display-tooltip-when-elided="true" name="description" style="font-size: 50px; white-space: normal; -unity-text-align: upper-center; color: rgb(255, 255, 255);" />
+                <ui:Label tabindex="-1" text="Deine gefundenen Kunstwerke und Begriffe:" display-tooltip-when-elided="true" name="description" style="font-size: 55px; white-space: normal; -unity-text-align: upper-center; color: rgb(255, 255, 255);" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="footer" style="background-image: url(&apos;project://database/Assets/Sprites/menu_bar_gradient.png?fileID=2800000&amp;guid=767253adf1d6f4266acd56a8d04e4c64&amp;type=3#menu_bar_gradient&apos;); width: 100%; height: 318px; background-color: rgba(255, 255, 255, 0.01); position: absolute; bottom: 0;" />

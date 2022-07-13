@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using System.IO;
-using UnityEditor;
 using System;
 
 public class SelectRoom : MonoBehaviour
@@ -15,7 +13,8 @@ public class SelectRoom : MonoBehaviour
         VisualElement roomView = root.Q<VisualElement>("RoomView");
 
         //var roomVisualTree = Resources.Load<VisualTreeAsset>("RoomTemplate");
-        var roomVisualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UIComponents/RoomTemplate.uxml");
+        var roomVisualTree = Resources.Load<VisualTreeAsset>("Templates/RoomTemplate");
+
 
         VisualElement roomTemplate;
         Button roomButton;
@@ -35,6 +34,7 @@ public class SelectRoom : MonoBehaviour
 
             roomButton = roomTemplate.Q<Button>("RoomButton");
             roomButton.RegisterCallback<PointerUpEvent, string>(roomClicked, currentRoom.ToString());
+            roomName.RegisterCallback<PointerUpEvent, string>(roomClicked, currentRoom.ToString());
 
             roomChallenges = roomTemplate.Q<VisualElement>("RoomChallenges");
             artInRoom = PersistentManagerScript.Instance.getArtByRoom(currentRoom);

@@ -51,7 +51,8 @@ public class MenuBar : MonoBehaviour
                 break;
             case 4:
                 //QR-Code Scanner
-                middle.style.backgroundImage = new StyleBackground(exchangeIcon);
+                //middle.style.backgroundImage = new StyleBackground(exchangeIcon);
+                middle.style.display = DisplayStyle.None;
                 break;
             case 5:
                 //Info Text
