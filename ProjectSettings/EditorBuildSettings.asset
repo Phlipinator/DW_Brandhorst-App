@@ -26,4 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/6_Trophies.unity
     guid: ad2e000f36a0c5749a7aebd0ce6991d3
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 5d122877468828a4caa6425ff4cb91c6, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b2c4819ce307145398f54778cfe0825c, type: 2}

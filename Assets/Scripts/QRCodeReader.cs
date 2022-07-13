@@ -16,6 +16,7 @@ public class QRCodeReader : MonoBehaviour
     //private WebCamTexture _cameraTexture;
 
     public GameObject failScreen;
+    public GameObject sucessScreen;
     public SceneManagerScript sceneChanger;
 
     private string QRText;
@@ -29,6 +30,7 @@ public class QRCodeReader : MonoBehaviour
         SetUpCamera();
         //Makes both screens invisible by default
         failScreen.SetActive(false);
+        sucessScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -49,7 +51,8 @@ public class QRCodeReader : MonoBehaviour
                 PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
                 PersistentManagerScript.Instance._cameraTexture.Stop();
                 // or goToSixt, if we want to show Tropy overview
-                sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
+                //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
+                sucessScreen.SetActive(true);
             }
             else
             {   
