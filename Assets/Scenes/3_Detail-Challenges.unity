@@ -338,14 +338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b7e1f3ace0645f1951250e711bbf06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img01: {fileID: 2800000, guid: 7405e43bfbd2f1e4e85bc6c0b9f3ede2, type: 3}
-  img02: {fileID: 2800000, guid: d2399e38a680149179ec64fb4963166e, type: 3}
-  img03: {fileID: 2800000, guid: ea7bea590617a184086e0b638d8a90aa, type: 3}
-  img04: {fileID: 2800000, guid: 2c04bc70522ac1046918b58f8b170f5c, type: 3}
-  img05: {fileID: 2800000, guid: 095ec335d9b31fd4aa69ad305eaebb5b, type: 3}
-  img06: {fileID: 2800000, guid: d16451912386242fa8d6ca0405ced226, type: 3}
-  img07: {fileID: 2800000, guid: fd24e1b723ba42d42b3ec72e0fc19583, type: 3}
-  img08: {fileID: 2800000, guid: 80e83e13c192e4059a13a56740bb22cd, type: 3}
   sceneChange: {fileID: 518812156}
 --- !u!1 &2101270208
 GameObject:
