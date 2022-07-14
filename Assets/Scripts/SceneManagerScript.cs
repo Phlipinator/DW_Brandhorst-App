@@ -20,6 +20,18 @@ public class SceneManagerScript : MonoBehaviour
         SceneManager.LoadScene("1_RoomOverview");
     }
 
+    //Ask User if he wants the Tutorial
+    public void startTutorial()
+    {
+        SceneManager.LoadScene("1_2_Tutorial");
+    }
+
+    //load Tutorial
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("1_3_Tutorial");
+    }
+
     //roomID can be passed with this function to make sure the right artwork is displayed
     public void goToSecond(Room roomID)
     {

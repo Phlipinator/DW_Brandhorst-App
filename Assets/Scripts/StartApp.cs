@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.IO;
+using UnityEngine.SceneManagement;
 
-public class Start_Next : MonoBehaviour
+public class StartApp : MonoBehaviour
 {
     public SceneManagerScript sceneChange;
-    
+
     void Awake()
     {
-        //get Buttons of each Challenge
+        //get Elements of UIDocument
         var root = this.GetComponent<UIDocument>().rootVisualElement;
-        Button next = root.Q<Button>("weiterButton");
 
-        next.clicked += () =>
+        //get Buttons
+        Button continueButton = root.Q<Button>("start");
+
+        continueButton.clicked += () =>
         {
-            //Szene wechseln
-            sceneChange.startTutorial();
-            Debug.Log("Next clicked");
+            sceneChange.goToFirst();
         };
 
-        
     }
-    
+
 }

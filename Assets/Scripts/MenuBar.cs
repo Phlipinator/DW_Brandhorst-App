@@ -24,7 +24,7 @@ public class MenuBar : MonoBehaviour
             case 0:
                 //Start Screen
                 break;
-            case 1:
+            case 3:
                 //Raum Übersicht
                 home.style.backgroundImage = new StyleBackground(exchangeIcon);
                 middle.clicked += () =>
@@ -33,7 +33,7 @@ public class MenuBar : MonoBehaviour
                     sceneChange.goToSixt();
                 };
                 break;
-            case 2:
+            case 4:
                 //Challenges Übersicht
                 middle.clicked += () =>
                 {
@@ -41,7 +41,7 @@ public class MenuBar : MonoBehaviour
                     sceneChange.goToSixt();
                 };
                 break;
-            case 3:
+            case 5:
                 //Detail Challenges
                 middle.style.backgroundImage = new StyleBackground(exchangeIcon);
                 middle.clicked += () =>
@@ -49,12 +49,12 @@ public class MenuBar : MonoBehaviour
                     sceneChange.goToFourth();
                 };
                 break;
-            case 4:
+            case 6:
                 //QR-Code Scanner
                 //middle.style.backgroundImage = new StyleBackground(exchangeIcon);
                 middle.style.display = DisplayStyle.None;
                 break;
-            case 5:
+            case 7:
                 //Info Text
                 //middle.style.backgroundImage = new StyleBackground(exchangeIcon); //has to be removed when scene5 is merged!!!
                 middle.clicked += () =>
@@ -63,7 +63,7 @@ public class MenuBar : MonoBehaviour
                     sceneChange.goToSixt();
                 };
                 break;
-            case 6:
+            case 8:
                 //Trophy Übersicht
                 middle.style.backgroundImage = new StyleBackground(exchangeIcon);
                 break;

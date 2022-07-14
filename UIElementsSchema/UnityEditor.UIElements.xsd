@@ -35,11 +35,7 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="PropertyControl" substitutionGroup="engine:VisualElement" type="editor:PropertyControlType" />
-<<<<<<< HEAD
   <xs:complexType name="InspectorElementType">
-=======
-  <xs:complexType name="ColorFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -47,42 +43,21 @@
         </xs:sequence>
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="Ignore" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
-        <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
-        <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
-        <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-<<<<<<< HEAD
-=======
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
-        <xs:attribute default="RGBA(0.000, 0.000, 0.000, 1.000)" name="value" type="xs:string" use="optional" />
-        <xs:attribute default="true" name="show-eye-dropper" type="xs:boolean" use="optional" />
-        <xs:attribute default="true" name="show-alpha" type="xs:boolean" use="optional" />
-        <xs:attribute default="false" name="hdr" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="InspectorElement" substitutionGroup="engine:VisualElement" type="editor:InspectorElementType" />
   <xs:complexType name="ToolbarBreadcrumbsType">
-=======
-  <xs:element name="ColorField" substitutionGroup="engine:VisualElement" type="editor:ColorFieldType" />
-  <xs:complexType name="CurveFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -94,37 +69,18 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
-        <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ToolbarBreadcrumbs" substitutionGroup="engine:VisualElement" type="editor:ToolbarBreadcrumbsType" />
   <xs:complexType name="ToolbarButtonType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
-=======
-  <xs:element name="CurveField" substitutionGroup="engine:VisualElement" type="editor:CurveFieldType" />
-  <xs:complexType name="EnumFlagsFieldType">
-    <xs:complexContent mixed="false">
-      <xs:restriction base="engine:VisualElementType">
-        <xs:sequence minOccurs="0" maxOccurs="unbounded">
-          <xs:element ref="engine:VisualElement" />
-        </xs:sequence>
->>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
@@ -136,67 +92,37 @@
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="" name="text" type="xs:string" use="optional" />
         <xs:attribute default="true" name="enable-rich-text" type="xs:boolean" use="optional" />
         <xs:attribute default="false" name="display-tooltip-when-elided" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
-        <xs:attribute default="null" name="type" type="xs:string" use="optional" />
-        <xs:attribute default="" name="value" type="xs:string" use="optional" />
-        <xs:attribute default="false" name="include-obsolete-values" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ToolbarButton" substitutionGroup="engine:VisualElement" type="editor:ToolbarButtonType" />
   <xs:complexType name="ToolbarMenuType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
-=======
-  <xs:element name="EnumFlagsField" substitutionGroup="engine:VisualElement" type="editor:EnumFlagsFieldType" />
-  <xs:complexType name="GradientFieldType">
-    <xs:complexContent mixed="false">
-      <xs:restriction base="engine:VisualElementType">
-        <xs:sequence minOccurs="0" maxOccurs="unbounded">
-          <xs:element ref="engine:VisualElement" />
-        </xs:sequence>
->>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="" name="text" type="xs:string" use="optional" />
         <xs:attribute default="true" name="enable-rich-text" type="xs:boolean" use="optional" />
         <xs:attribute default="false" name="display-tooltip-when-elided" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ToolbarMenu" substitutionGroup="engine:VisualElement" type="editor:ToolbarMenuType" />
   <xs:complexType name="ToolbarPopupSearchFieldType">
-=======
-  <xs:element name="GradientField" substitutionGroup="engine:VisualElement" type="editor:GradientFieldType" />
-  <xs:complexType name="LayerFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -208,31 +134,16 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
-        <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
-        <xs:attribute default="0" name="value" type="xs:int" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ToolbarPopupSearchField" substitutionGroup="engine:VisualElement" type="editor:ToolbarPopupSearchFieldType" />
   <xs:complexType name="ToolbarSpacerType">
-=======
-  <xs:element name="LayerField" substitutionGroup="engine:VisualElement" type="editor:LayerFieldType" />
-  <xs:complexType name="LayerMaskFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -244,31 +155,16 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
-        <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
-        <xs:attribute default="0" name="value" type="xs:int" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ToolbarSpacer" substitutionGroup="engine:VisualElement" type="editor:ToolbarSpacerType" />
   <xs:complexType name="ToolbarType">
-=======
-  <xs:element name="LayerMaskField" substitutionGroup="engine:VisualElement" type="editor:LayerMaskFieldType" />
-  <xs:complexType name="MaskFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -280,32 +176,16 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
-        <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
-        <xs:attribute default="" name="choices" type="xs:string" use="optional" />
-        <xs:attribute default="0" name="value" type="xs:int" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="Toolbar" substitutionGroup="engine:VisualElement" type="editor:ToolbarType" />
   <xs:complexType name="ToolbarSearchFieldType">
-=======
-  <xs:element name="MaskField" substitutionGroup="engine:VisualElement" type="editor:MaskFieldType" />
-  <xs:complexType name="ObjectFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -317,32 +197,16 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
-        <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
-        <xs:attribute default="true" name="allow-scene-objects" type="xs:boolean" use="optional" />
-        <xs:attribute default="null" name="type" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ToolbarSearchField" substitutionGroup="engine:VisualElement" type="editor:ToolbarSearchFieldType" />
   <xs:complexType name="ToolbarToggleType">
-=======
-  <xs:element name="ObjectField" substitutionGroup="engine:VisualElement" type="editor:ObjectFieldType" />
-  <xs:complexType name="PropertyFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -354,33 +218,20 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="" name="label" type="xs:string" use="optional" />
         <xs:attribute default="false" name="value" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="text" type="xs:string" use="optional" />
-=======
-        <xs:attribute name="label" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ToolbarToggle" substitutionGroup="engine:VisualElement" type="editor:ToolbarToggleType" />
   <xs:complexType name="LayerFieldType">
-=======
-  <xs:element name="PropertyField" substitutionGroup="engine:VisualElement" type="editor:PropertyFieldType" />
-  <xs:complexType name="TagFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -398,22 +249,13 @@
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
         <xs:attribute default="" name="label" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="0" name="value" type="xs:int" use="optional" />
-=======
-        <xs:attribute default="" name="value" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="LayerField" substitutionGroup="engine:VisualElement" type="editor:LayerFieldType" />
   <xs:complexType name="MaskFieldType">
-=======
-  <xs:element name="TagField" substitutionGroup="engine:VisualElement" type="editor:TagFieldType" />
-  <xs:complexType name="UnityEventItemType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -425,7 +267,6 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
@@ -434,23 +275,12 @@
         <xs:attribute default="" name="label" type="xs:string" use="optional" />
         <xs:attribute default="" name="choices" type="xs:string" use="optional" />
         <xs:attribute default="0" name="value" type="xs:int" use="optional" />
-=======
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="MaskField" substitutionGroup="engine:VisualElement" type="editor:MaskFieldType" />
   <xs:complexType name="ObjectFieldType">
-=======
-  <xs:element name="UnityEventItem" substitutionGroup="engine:VisualElement" type="editor:UnityEventItemType" />
-  <xs:complexType name="InspectorElementType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -458,40 +288,24 @@
         </xs:sequence>
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="Ignore" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
-        <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
-        <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
-        <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="" name="label" type="xs:string" use="optional" />
         <xs:attribute default="true" name="allow-scene-objects" type="xs:boolean" use="optional" />
         <xs:attribute default="null" name="type" type="xs:string" use="optional" />
-=======
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ObjectField" substitutionGroup="engine:VisualElement" type="editor:ObjectFieldType" />
   <xs:complexType name="CurveFieldType">
-=======
-  <xs:element name="InspectorElement" substitutionGroup="engine:VisualElement" type="editor:InspectorElementType" />
-  <xs:complexType name="ToolbarType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -503,30 +317,18 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
         <xs:attribute default="" name="label" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="CurveField" substitutionGroup="engine:VisualElement" type="editor:CurveFieldType" />
   <xs:complexType name="EnumFlagsFieldType">
-=======
-  <xs:element name="Toolbar" substitutionGroup="engine:VisualElement" type="editor:ToolbarType" />
-  <xs:complexType name="ToolbarBreadcrumbsType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -538,7 +340,6 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
@@ -548,17 +349,10 @@
         <xs:attribute default="null" name="type" type="xs:string" use="optional" />
         <xs:attribute default="" name="value" type="xs:string" use="optional" />
         <xs:attribute default="false" name="include-obsolete-values" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="EnumFlagsField" substitutionGroup="engine:VisualElement" type="editor:EnumFlagsFieldType" />
   <xs:complexType name="PropertyFieldType">
     <xs:complexContent mixed="false">
@@ -566,39 +360,22 @@
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
           <xs:element ref="engine:VisualElement" />
         </xs:sequence>
-=======
-  <xs:element name="ToolbarBreadcrumbs" substitutionGroup="engine:VisualElement" type="editor:ToolbarBreadcrumbsType" />
-  <xs:complexType name="ToolbarButtonType">
-    <xs:complexContent mixed="false">
-      <xs:restriction base="engine:VisualElementType">
->>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute name="label" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="" name="text" type="xs:string" use="optional" />
-        <xs:attribute default="true" name="enable-rich-text" type="xs:boolean" use="optional" />
-        <xs:attribute default="false" name="display-tooltip-when-elided" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PropertyField" substitutionGroup="engine:VisualElement" type="editor:PropertyFieldType" />
   <xs:complexType name="TagFieldType">
     <xs:complexContent mixed="false">
@@ -606,46 +383,25 @@
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
           <xs:element ref="engine:VisualElement" />
         </xs:sequence>
-=======
-  <xs:element name="ToolbarButton" substitutionGroup="engine:VisualElement" type="editor:ToolbarButtonType" />
-  <xs:complexType name="ToolbarMenuType">
-    <xs:complexContent mixed="false">
-      <xs:restriction base="engine:VisualElementType">
->>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="" name="label" type="xs:string" use="optional" />
         <xs:attribute default="" name="value" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="" name="text" type="xs:string" use="optional" />
-        <xs:attribute default="true" name="enable-rich-text" type="xs:boolean" use="optional" />
-        <xs:attribute default="false" name="display-tooltip-when-elided" type="xs:boolean" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="TagField" substitutionGroup="engine:VisualElement" type="editor:TagFieldType" />
   <xs:complexType name="GradientFieldType">
-=======
-  <xs:element name="ToolbarMenu" substitutionGroup="engine:VisualElement" type="editor:ToolbarMenuType" />
-  <xs:complexType name="ToolbarPopupSearchFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -657,30 +413,18 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
         <xs:attribute default="" name="label" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="GradientField" substitutionGroup="engine:VisualElement" type="editor:GradientFieldType" />
   <xs:complexType name="ColorFieldType">
-=======
-  <xs:element name="ToolbarPopupSearchField" substitutionGroup="engine:VisualElement" type="editor:ToolbarPopupSearchFieldType" />
-  <xs:complexType name="ToolbarSearchFieldType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -692,7 +436,6 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
@@ -703,23 +446,12 @@
         <xs:attribute default="true" name="show-eye-dropper" type="xs:boolean" use="optional" />
         <xs:attribute default="true" name="show-alpha" type="xs:boolean" use="optional" />
         <xs:attribute default="false" name="hdr" type="xs:boolean" use="optional" />
-=======
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ColorField" substitutionGroup="engine:VisualElement" type="editor:ColorFieldType" />
   <xs:complexType name="LayerMaskFieldType">
-=======
-  <xs:element name="ToolbarSearchField" substitutionGroup="engine:VisualElement" type="editor:ToolbarSearchFieldType" />
-  <xs:complexType name="ToolbarSpacerType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -731,7 +463,6 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
@@ -739,23 +470,12 @@
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
         <xs:attribute default="" name="label" type="xs:string" use="optional" />
         <xs:attribute default="0" name="value" type="xs:int" use="optional" />
-=======
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="LayerMaskField" substitutionGroup="engine:VisualElement" type="editor:LayerMaskFieldType" />
   <xs:complexType name="UnityEventItemType">
-=======
-  <xs:element name="ToolbarSpacer" substitutionGroup="engine:VisualElement" type="editor:ToolbarSpacerType" />
-  <xs:complexType name="ToolbarToggleType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -767,30 +487,15 @@
         <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
         <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
         <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
-=======
-        <xs:attribute default="true" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
-        <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-        <xs:attribute default="" name="label" type="xs:string" use="optional" />
-        <xs:attribute default="false" name="value" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="text" type="xs:string" use="optional" />
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="UnityEventItem" substitutionGroup="engine:VisualElement" type="editor:UnityEventItemType" />
-=======
-  <xs:element name="ToolbarToggle" substitutionGroup="engine:VisualElement" type="editor:ToolbarToggleType" />
->>>>>>> scene6
   <xs:complexType name="VisualSplitterType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">

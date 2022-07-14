@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:editor="UnityEditor.UIElements" xmlns:engine="UnityEngine.UIElements" xmlns="UnityEditor.Overlays" elementFormDefault="qualified" targetNamespace="UnityEditor.PackageManager.UI.Internal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
-<<<<<<< HEAD
   <xs:complexType name="PackageTagLabelType">
-=======
-  <xs:complexType name="ExtendableToolbarMenuType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
@@ -26,13 +22,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageTagLabel" substitutionGroup="engine:VisualElement" xmlns:q1="UnityEditor.PackageManager.UI.Internal" type="q1:PackageTagLabelType" />
   <xs:complexType name="PackageLoadBarType">
-=======
-  <xs:element name="ExtendableToolbarMenu" substitutionGroup="engine:VisualElement" xmlns:q1="UnityEditor.PackageManager.UI.Internal" type="q1:ExtendableToolbarMenuType" />
-  <xs:complexType name="InProgressViewType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -52,13 +43,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageLoadBar" substitutionGroup="engine:VisualElement" xmlns:q2="UnityEditor.PackageManager.UI.Internal" type="q2:PackageLoadBarType" />
   <xs:complexType name="InProgressViewType">
-=======
-  <xs:element name="InProgressView" substitutionGroup="engine:VisualElement" xmlns:q2="UnityEditor.PackageManager.UI.Internal" type="q2:InProgressViewType" />
-  <xs:complexType name="PackageDependenciesType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -78,13 +64,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="InProgressView" substitutionGroup="engine:VisualElement" xmlns:q3="UnityEditor.PackageManager.UI.Internal" type="q3:InProgressViewType" />
   <xs:complexType name="PackageListScrollViewType">
-=======
-  <xs:element name="PackageDependencies" substitutionGroup="engine:VisualElement" xmlns:q3="UnityEditor.PackageManager.UI.Internal" type="q3:PackageDependenciesType" />
-  <xs:complexType name="PackageDetailsType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -104,13 +85,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageListScrollView" substitutionGroup="engine:VisualElement" xmlns:q4="UnityEditor.PackageManager.UI.Internal" type="q4:PackageListScrollViewType" />
   <xs:complexType name="PackageDetailsHeaderType">
-=======
-  <xs:element name="PackageDetails" substitutionGroup="engine:VisualElement" xmlns:q4="UnityEditor.PackageManager.UI.Internal" type="q4:PackageDetailsType" />
-  <xs:complexType name="PackageDetailsBodyType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -130,13 +106,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageDetailsHeader" substitutionGroup="engine:VisualElement" xmlns:q5="UnityEditor.PackageManager.UI.Internal" type="q5:PackageDetailsHeaderType" />
   <xs:complexType name="PackageStatusBarType">
-=======
-  <xs:element name="PackageDetailsBody" substitutionGroup="engine:VisualElement" xmlns:q5="UnityEditor.PackageManager.UI.Internal" type="q5:PackageDetailsBodyType" />
-  <xs:complexType name="PackageDetailsHeaderType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -156,13 +127,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageStatusBar" substitutionGroup="engine:VisualElement" xmlns:q6="UnityEditor.PackageManager.UI.Internal" type="q6:PackageStatusBarType" />
   <xs:complexType name="PackageSampleListType">
-=======
-  <xs:element name="PackageDetailsHeader" substitutionGroup="engine:VisualElement" xmlns:q6="UnityEditor.PackageManager.UI.Internal" type="q6:PackageDetailsHeaderType" />
-  <xs:complexType name="PackageDetailsImagesType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -182,13 +148,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageSampleList" substitutionGroup="engine:VisualElement" xmlns:q7="UnityEditor.PackageManager.UI.Internal" type="q7:PackageSampleListType" />
   <xs:complexType name="PackageDependenciesType">
-=======
-  <xs:element name="PackageDetailsImages" substitutionGroup="engine:VisualElement" xmlns:q7="UnityEditor.PackageManager.UI.Internal" type="q7:PackageDetailsImagesType" />
-  <xs:complexType name="PackageDetailsLinksType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -208,13 +169,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageDependencies" substitutionGroup="engine:VisualElement" xmlns:q8="UnityEditor.PackageManager.UI.Internal" type="q8:PackageDependenciesType" />
   <xs:complexType name="PackageSubPageFilterBarType">
-=======
-  <xs:element name="PackageDetailsLinks" substitutionGroup="engine:VisualElement" xmlns:q8="UnityEditor.PackageManager.UI.Internal" type="q8:PackageDetailsLinksType" />
-  <xs:complexType name="PackageListType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -234,13 +190,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageSubPageFilterBar" substitutionGroup="engine:VisualElement" xmlns:q9="UnityEditor.PackageManager.UI.Internal" type="q9:PackageSubPageFilterBarType" />
   <xs:complexType name="ScopedRegistriesSettingsType">
-=======
-  <xs:element name="PackageList" substitutionGroup="engine:VisualElement" xmlns:q9="UnityEditor.PackageManager.UI.Internal" type="q9:PackageListType" />
-  <xs:complexType name="PackageListScrollViewType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -260,13 +211,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ScopedRegistriesSettings" substitutionGroup="engine:VisualElement" xmlns:q10="UnityEditor.PackageManager.UI.Internal" type="q10:ScopedRegistriesSettingsType" />
   <xs:complexType name="PackageDetailsBodyType">
-=======
-  <xs:element name="PackageListScrollView" substitutionGroup="engine:VisualElement" xmlns:q10="UnityEditor.PackageManager.UI.Internal" type="q10:PackageListScrollViewType" />
-  <xs:complexType name="PackageListViewType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -286,13 +232,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageDetailsBody" substitutionGroup="engine:VisualElement" xmlns:q11="UnityEditor.PackageManager.UI.Internal" type="q11:PackageDetailsBodyType" />
   <xs:complexType name="PackageReleaseDetailsItemType">
-=======
-  <xs:element name="PackageListView" substitutionGroup="engine:VisualElement" xmlns:q11="UnityEditor.PackageManager.UI.Internal" type="q11:PackageListViewType" />
-  <xs:complexType name="PackageLoadBarType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -312,11 +253,7 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageReleaseDetailsItem" substitutionGroup="engine:VisualElement" xmlns:q12="UnityEditor.PackageManager.UI.Internal" type="q12:PackageReleaseDetailsItemType" />
-=======
-  <xs:element name="PackageLoadBar" substitutionGroup="engine:VisualElement" xmlns:q12="UnityEditor.PackageManager.UI.Internal" type="q12:PackageLoadBarType" />
->>>>>>> scene6
   <xs:complexType name="PackageManagerToolbarType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
@@ -338,7 +275,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="PackageManagerToolbar" substitutionGroup="engine:VisualElement" xmlns:q13="UnityEditor.PackageManager.UI.Internal" type="q13:PackageManagerToolbarType" />
-<<<<<<< HEAD
   <xs:complexType name="PackageDetailsImagesType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
@@ -361,9 +297,6 @@
   </xs:complexType>
   <xs:element name="PackageDetailsImages" substitutionGroup="engine:VisualElement" xmlns:q14="UnityEditor.PackageManager.UI.Internal" type="q14:PackageDetailsImagesType" />
   <xs:complexType name="PackageListType">
-=======
-  <xs:complexType name="PackagePlatformListType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -383,13 +316,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageList" substitutionGroup="engine:VisualElement" xmlns:q15="UnityEditor.PackageManager.UI.Internal" type="q15:PackageListType" />
   <xs:complexType name="PackageDetailsType">
-=======
-  <xs:element name="PackagePlatformList" substitutionGroup="engine:VisualElement" xmlns:q14="UnityEditor.PackageManager.UI.Internal" type="q14:PackagePlatformListType" />
-  <xs:complexType name="PackageReleaseDetailsItemType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -409,13 +337,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageDetails" substitutionGroup="engine:VisualElement" xmlns:q16="UnityEditor.PackageManager.UI.Internal" type="q16:PackageDetailsType" />
   <xs:complexType name="PackageDetailsLinksType">
-=======
-  <xs:element name="PackageReleaseDetailsItem" substitutionGroup="engine:VisualElement" xmlns:q15="UnityEditor.PackageManager.UI.Internal" type="q15:PackageReleaseDetailsItemType" />
-  <xs:complexType name="PackageSampleListType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -435,13 +358,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageDetailsLinks" substitutionGroup="engine:VisualElement" xmlns:q17="UnityEditor.PackageManager.UI.Internal" type="q17:PackageDetailsLinksType" />
   <xs:complexType name="PackagePlatformListType">
-=======
-  <xs:element name="PackageSampleList" substitutionGroup="engine:VisualElement" xmlns:q16="UnityEditor.PackageManager.UI.Internal" type="q16:PackageSampleListType" />
-  <xs:complexType name="PackageStatusBarType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -461,13 +379,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackagePlatformList" substitutionGroup="engine:VisualElement" xmlns:q18="UnityEditor.PackageManager.UI.Internal" type="q18:PackagePlatformListType" />
   <xs:complexType name="PackageListViewType">
-=======
-  <xs:element name="PackageStatusBar" substitutionGroup="engine:VisualElement" xmlns:q17="UnityEditor.PackageManager.UI.Internal" type="q17:PackageStatusBarType" />
-  <xs:complexType name="PackageSubPageFilterBarType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -487,13 +400,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageListView" substitutionGroup="engine:VisualElement" xmlns:q19="UnityEditor.PackageManager.UI.Internal" type="q19:PackageListViewType" />
   <xs:complexType name="ExtendableToolbarMenuType">
-=======
-  <xs:element name="PackageSubPageFilterBar" substitutionGroup="engine:VisualElement" xmlns:q18="UnityEditor.PackageManager.UI.Internal" type="q18:PackageSubPageFilterBarType" />
-  <xs:complexType name="PackageTagLabelType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
@@ -514,13 +422,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ExtendableToolbarMenu" substitutionGroup="engine:VisualElement" xmlns:q20="UnityEditor.PackageManager.UI.Internal" type="q20:ExtendableToolbarMenuType" />
   <xs:complexType name="FeatureDependenciesType">
-=======
-  <xs:element name="PackageTagLabel" substitutionGroup="engine:VisualElement" xmlns:q19="UnityEditor.PackageManager.UI.Internal" type="q19:PackageTagLabelType" />
-  <xs:complexType name="ScopedRegistriesSettingsType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -540,13 +443,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="FeatureDependencies" substitutionGroup="engine:VisualElement" xmlns:q21="UnityEditor.PackageManager.UI.Internal" type="q21:FeatureDependenciesType" />
   <xs:complexType name="PackageToolbarType">
-=======
-  <xs:element name="ScopedRegistriesSettings" substitutionGroup="engine:VisualElement" xmlns:q20="UnityEditor.PackageManager.UI.Internal" type="q20:ScopedRegistriesSettingsType" />
-  <xs:complexType name="AlertType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -566,20 +464,10 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="PackageToolbar" substitutionGroup="engine:VisualElement" xmlns:q22="UnityEditor.PackageManager.UI.Internal" type="q22:PackageToolbarType" />
   <xs:complexType name="ToolbarWindowMenuType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
-=======
-  <xs:element name="Alert" substitutionGroup="engine:VisualElement" xmlns:q21="UnityEditor.PackageManager.UI.Internal" type="q21:AlertType" />
-  <xs:complexType name="DropdownButtonType">
-    <xs:complexContent mixed="false">
-      <xs:restriction base="engine:VisualElementType">
-        <xs:sequence minOccurs="0" maxOccurs="unbounded">
-          <xs:element ref="engine:VisualElement" />
-        </xs:sequence>
->>>>>>> scene6
         <xs:attribute default="" name="name" type="xs:string" use="optional" />
         <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
         <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
@@ -590,24 +478,16 @@
         <xs:attribute default="" name="class" type="xs:string" use="optional" />
         <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
         <xs:attribute default="" name="style" type="xs:string" use="optional" />
-<<<<<<< HEAD
         <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
         <xs:attribute default="" name="text" type="xs:string" use="optional" />
         <xs:attribute default="true" name="enable-rich-text" type="xs:boolean" use="optional" />
         <xs:attribute default="false" name="display-tooltip-when-elided" type="xs:boolean" use="optional" />
-=======
->>>>>>> scene6
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ToolbarWindowMenu" substitutionGroup="engine:VisualElement" xmlns:q23="UnityEditor.PackageManager.UI.Internal" type="q23:ToolbarWindowMenuType" />
   <xs:complexType name="DropdownButtonType">
-=======
-  <xs:element name="DropdownButton" substitutionGroup="engine:VisualElement" xmlns:q22="UnityEditor.PackageManager.UI.Internal" type="q22:DropdownButtonType" />
-  <xs:complexType name="LoadingSpinnerType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -627,13 +507,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="DropdownButton" substitutionGroup="engine:VisualElement" xmlns:q24="UnityEditor.PackageManager.UI.Internal" type="q24:DropdownButtonType" />
   <xs:complexType name="LoadingSpinnerType">
-=======
-  <xs:element name="LoadingSpinner" substitutionGroup="engine:VisualElement" xmlns:q23="UnityEditor.PackageManager.UI.Internal" type="q23:LoadingSpinnerType" />
-  <xs:complexType name="ProgressBarType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -653,11 +528,7 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="LoadingSpinner" substitutionGroup="engine:VisualElement" xmlns:q25="UnityEditor.PackageManager.UI.Internal" type="q25:LoadingSpinnerType" />
-=======
-  <xs:element name="ProgressBar" substitutionGroup="engine:VisualElement" xmlns:q24="UnityEditor.PackageManager.UI.Internal" type="q24:ProgressBarType" />
->>>>>>> scene6
   <xs:complexType name="SelectableLabelType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
@@ -688,35 +559,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="SelectableLabel" substitutionGroup="engine:VisualElement" xmlns:q26="UnityEditor.PackageManager.UI.Internal" type="q26:SelectableLabelType" />
   <xs:complexType name="AlertType">
-=======
-  <xs:element name="SelectableLabel" substitutionGroup="engine:VisualElement" xmlns:q25="UnityEditor.PackageManager.UI.Internal" type="q25:SelectableLabelType" />
-  <xs:complexType name="ToolbarWindowMenuType">
-    <xs:complexContent mixed="false">
-      <xs:restriction base="engine:VisualElementType">
-        <xs:attribute default="" name="name" type="xs:string" use="optional" />
-        <xs:attribute default="" name="view-data-key" type="xs:string" use="optional" />
-        <xs:attribute default="Position" name="picking-mode" type="engine:VisualElement_picking-mode_Type" use="optional" />
-        <xs:attribute default="" name="tooltip" type="xs:string" use="optional" />
-        <xs:attribute default="None" name="usage-hints" type="engine:VisualElement_usage-hints_Type" use="optional" />
-        <xs:attribute default="0" name="tabindex" type="xs:int" use="optional" />
-        <xs:attribute default="false" name="focusable" type="xs:boolean" use="optional" />
-        <xs:attribute default="" name="class" type="xs:string" use="optional" />
-        <xs:attribute default="" name="content-container" type="xs:string" use="optional" />
-        <xs:attribute default="" name="style" type="xs:string" use="optional" />
-        <xs:attribute default="" name="binding-path" type="xs:string" use="optional" />
-        <xs:attribute default="" name="text" type="xs:string" use="optional" />
-        <xs:attribute default="true" name="enable-rich-text" type="xs:boolean" use="optional" />
-        <xs:attribute default="false" name="display-tooltip-when-elided" type="xs:boolean" use="optional" />
-        <xs:anyAttribute processContents="lax" />
-      </xs:restriction>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="ToolbarWindowMenu" substitutionGroup="engine:VisualElement" xmlns:q26="UnityEditor.PackageManager.UI.Internal" type="q26:ToolbarWindowMenuType" />
-  <xs:complexType name="FeatureDependenciesType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -736,13 +580,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="Alert" substitutionGroup="engine:VisualElement" xmlns:q27="UnityEditor.PackageManager.UI.Internal" type="q27:AlertType" />
   <xs:complexType name="ProgressBarType">
-=======
-  <xs:element name="FeatureDependencies" substitutionGroup="engine:VisualElement" xmlns:q27="UnityEditor.PackageManager.UI.Internal" type="q27:FeatureDependenciesType" />
-  <xs:complexType name="MultiSelectDetailsType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -762,13 +601,8 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="ProgressBar" substitutionGroup="engine:VisualElement" xmlns:q28="UnityEditor.PackageManager.UI.Internal" type="q28:ProgressBarType" />
   <xs:complexType name="MultiSelectDetailsType">
-=======
-  <xs:element name="MultiSelectDetails" substitutionGroup="engine:VisualElement" xmlns:q28="UnityEditor.PackageManager.UI.Internal" type="q28:MultiSelectDetailsType" />
-  <xs:complexType name="PackageToolbarType">
->>>>>>> scene6
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -788,9 +622,5 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-<<<<<<< HEAD
   <xs:element name="MultiSelectDetails" substitutionGroup="engine:VisualElement" xmlns:q29="UnityEditor.PackageManager.UI.Internal" type="q29:MultiSelectDetailsType" />
-=======
-  <xs:element name="PackageToolbar" substitutionGroup="engine:VisualElement" xmlns:q29="UnityEditor.PackageManager.UI.Internal" type="q29:PackageToolbarType" />
->>>>>>> scene6
 </xs:schema>
