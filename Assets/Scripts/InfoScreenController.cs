@@ -13,10 +13,15 @@ public class InfoScreenController : MonoBehaviour
 
         var root = GetComponent<UIDocument>().rootVisualElement;
         VisualElement artImage = root.Q<VisualElement>("art_image");
-        Label artAuthor = root.Q<Label>("art_author");
+        //Label artAuthor = root.Q<Label>("art_author");
         Label artDescription = root.Q<Label>("art_description");
+        Texture2D sprite;
+        sprite = Resources.Load<Texture2D>("Sprites/largeImages/" + artID.ToString());
+        if (sprite == null)
+        {
+            sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + artID.ToString());
 
-        var sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToLargeImages + artID.ToString());
+        }
         artImage.style.backgroundImage = sprite;
 
         //artAuthor.text = art.getAuthor() + ", " + art.getYear(); 

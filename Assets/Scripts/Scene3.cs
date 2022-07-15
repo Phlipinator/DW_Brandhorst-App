@@ -22,7 +22,7 @@ public class Scene3 : MonoBehaviour
         int artID = PersistentManagerScript.Instance.artworkID;
         Art art = PersistentManagerScript.Instance.getArtByID(artID);
         List<string> hintList = art.getTips();
-        var sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToLargeImages + artID.ToString());
+        var sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + artID.ToString());
         artworkThumbnail.style.backgroundImage = sprite;
 
         sprite = Resources.Load<Texture2D>("Sprites/ArtTitle/" + artID.ToString() + "_blur");

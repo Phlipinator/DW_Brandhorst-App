@@ -24,10 +24,10 @@ public class PersistentManagerScript : MonoBehaviour
     public List<Art> exhibition;
 
     public float hintProgressDuration = 10;
-
+    
     public string pathToThumbnails = "Sprites/thumbnails/";
-    //do we have large images?
-    public string pathToLargeImages = "Sprites/thumbnails/";
+    //path to large images is now hard coded in InfoScreenController
+    //public string pathToLargeImages = "Sprites/largeImages/";
 
     //Set all art pieces of the exhibition
     public void defineExhibition()
