@@ -19,6 +19,8 @@ public class QRCodeReader : MonoBehaviour
     public GameObject sucessScreen;
     public SceneManagerScript sceneChanger;
 
+    private bool scanSuccessful = false;
+
     private string QRText;
     void Start()
     {
@@ -45,24 +47,27 @@ public class QRCodeReader : MonoBehaviour
         }
         else
         {
-            if (QRText == "art" + PersistentManagerScript.Instance.artworkID.ToString())
+            if (!scanSuccessful)
             {
-                //Adds the unlocked Artwork to a List
-                PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
-                PersistentManagerScript.Instance._cameraTexture.Stop();
-                // or goToSixt, if we want to show Tropy overview
-                //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
+                if (QRText == "art" + PersistentManagerScript.Instance.artworkID.ToString())
+                {
+                    scanSuccessful = true;
+                    //Adds the unlocked Artwork to a List
+                    PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
+                    PersistentManagerScript.Instance._cameraTexture.Stop();
+                    // or goToSixt, if we want to show Tropy overview
+                    //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
 
-                PersistentManagerScript.Instance.removeLastFromSceneHistory();
-                sucessScreen.SetActive(true);
+                    PersistentManagerScript.Instance.removeLastFromSceneHistory();
+                    //Debug.Log(PersistentManagerScript.Instance.sceneHistory[PersistentManagerScript.Instance.sceneHistory.Count - 1]);
+                    sucessScreen.SetActive(true);
+                }
+                else
+                {
+                    //doScanning gets set to true by clicking the pop-up
+                    failScreen.SetActive(true);
+                }
             }
-            else
-            {   
-                //doScanning gets set to true by clicking the pop-up
-                failScreen.SetActive(true);
-                
-            }
-            
         }
     }
     

@@ -22,6 +22,7 @@ public class PersistentManagerScript : MonoBehaviour
     public WebCamTexture _cameraTexture;
     public List<int> unlockedArtworks;
     public List<Art> exhibition;
+    public string currentScene;
 
     public float hintProgressDuration = 10;
     

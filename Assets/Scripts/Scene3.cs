@@ -42,7 +42,7 @@ public class Scene3 : MonoBehaviour
 
 
         VisualElement HintTemplate;
-
+        
         for (var i = 0; i < hintList.Count; i++)
         {
             HintTemplate = hintVisualTree.CloneTree();
@@ -69,17 +69,20 @@ public class Scene3 : MonoBehaviour
                 new TimeValue(hintProgressDelay, TimeUnit.Second)
             };
             hintProgressDelay += hintProgressDuration;
-            StartCoroutine(startHintProgressBar(0.1f, progressBar));
-            StartCoroutine(registerButtonClick(0.1f + hintProgressDelay, hintButton, i));
+            StartCoroutine(startHintProgressBar(0.01f, progressBar));
+            StartCoroutine(registerButtonClick(0.01f + hintProgressDelay, hintButton, i));
             hintContainer.Add(HintTemplate);
         }
+        
 
     }
 
     private IEnumerator startHintProgressBar(float delay, VisualElement bar)
     {
+        Debug.Log("hier2");
+        Debug.Log(PersistentManagerScript.Instance.currentScene);
         yield return new WaitForSeconds(delay);
-        if (bar != null)
+        if (PersistentManagerScript.Instance.sceneHistory[PersistentManagerScript.Instance.sceneHistory.Count - 1] == "2_Challenges")
         {
             bar.AddToClassList("progress-active");
         }
@@ -88,7 +91,7 @@ public class Scene3 : MonoBehaviour
     private IEnumerator registerButtonClick(float delay, Button button, int i)
     {
         yield return new WaitForSeconds(delay);
-        if (button != null)
+        if (PersistentManagerScript.Instance.sceneHistory[PersistentManagerScript.Instance.sceneHistory.Count - 1] == "2_Challenges")
         {
             button.RegisterCallback<PointerUpEvent, string>(hintClicked, i.ToString());
         }
