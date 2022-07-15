@@ -25,7 +25,7 @@ public class QRCodeReader : MonoBehaviour
         //uncomment to test without scanning
         //PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
         //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
-         
+
         //Initialises cam
         SetUpCamera();
         //Makes both screens invisible by default
@@ -52,6 +52,8 @@ public class QRCodeReader : MonoBehaviour
                 PersistentManagerScript.Instance._cameraTexture.Stop();
                 // or goToSixt, if we want to show Tropy overview
                 //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
+
+                PersistentManagerScript.Instance.removeLastFromSceneHistory();
                 sucessScreen.SetActive(true);
             }
             else

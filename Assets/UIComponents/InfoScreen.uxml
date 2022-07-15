@@ -13,9 +13,9 @@
             </ui:ScrollView>
         </ui:VisualElement>
         <ui:VisualElement name="header" style="height: 555px; min-width: auto; min-height: auto; position: absolute; width: 100%; background-image: url(&apos;project://database/Assets/Sprites/scene5/header_color_main.png?fileID=2800000&amp;guid=ed3f8281d83c9434dbeaa14c315a5fae&amp;type=3#header_color_main&apos;);">
-            <ui:VisualElement name="inner" style="width: 100%; height: 100%; padding-top: 105px; padding-left: 90px; padding-right: 90px; padding-bottom: 105px; min-width: auto; min-height: auto;">
+            <ui:VisualElement name="inner" style="width: 100%; height: 100%; padding-top: 40px; padding-left: 90px; padding-right: 90px; padding-bottom: 105px; min-width: auto; min-height: auto;">
                 <ui:VisualElement name="title" style="background-image: url(&apos;project://database/Assets/Sprites/scene5/header_title_small.png?fileID=2800000&amp;guid=1b9bd51654d1c1940bd48e57a79bd4da&amp;type=3#header_title_small&apos;); width: 100%; height: 78px; margin-bottom: 50px; display: none;" />
-                <ui:VisualElement name="Header" style="height: 325px; width: 1080px; display: flex; -unity-background-scale-mode: scale-to-fit; margin-left: 0; margin-top: 0;" />
+                <ui:VisualElement name="Header" style="height: 325px; width: 990px; display: flex; -unity-background-scale-mode: scale-to-fit; margin-left: 0; margin-top: 0;" />
                 <ui:Label tabindex="-1" text="NAME KÜNSTLER:IN, 2006" display-tooltip-when-elided="true" name="art_author" style="height: auto; flex-grow: 1; font-size: 55px; color: rgb(255, 255, 255); display: none;" />
             </ui:VisualElement>
         </ui:VisualElement>

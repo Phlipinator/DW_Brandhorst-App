@@ -24,17 +24,20 @@ public class SelectChallenge : MonoBehaviour
         for (var i = 0; i < artInRoom.Count; i++)
         {
             id = artInRoom[i].getID();
-            ArtButton elem = new ArtButton();
-            elem.name = "art" + id.ToString();
-            elem.setArtID(id.ToString());
-            elem.RemoveFromClassList("unity-button");
-            elem.AddToClassList("image-list-element");
-            sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + id.ToString());
-            elem.style.backgroundImage = sprite;
+            if (!PersistentManagerScript.Instance.artworkUnlocked(id))
+            {
+                ArtButton elem = new ArtButton();
+                elem.name = "art" + id.ToString();
+                elem.setArtID(id.ToString());
+                elem.RemoveFromClassList("unity-button");
+                elem.AddToClassList("image-list-element");
+                sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + id.ToString());
+                elem.style.backgroundImage = sprite;
 
-            elem.RegisterCallback<PointerUpEvent, string>(artClicked, elem.getArtID());
+                elem.RegisterCallback<PointerUpEvent, string>(artClicked, elem.getArtID());
 
-            challangeList.Add(elem);
+                challangeList.Add(elem);
+            }
         }
     }
 
