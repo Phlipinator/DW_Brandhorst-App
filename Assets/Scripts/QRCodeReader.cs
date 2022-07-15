@@ -23,11 +23,11 @@ public class QRCodeReader : MonoBehaviour
     void Start()
     {
         //uncomment to test without scanning
-        //PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
-        //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
+        PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
+        sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
 
         //Initialises cam
-        SetUpCamera();
+        //SetUpCamera();
         //Makes both screens invisible by default
         failScreen.SetActive(false);
         sucessScreen.SetActive(false);
