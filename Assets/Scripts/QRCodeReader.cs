@@ -25,7 +25,7 @@ public class QRCodeReader : MonoBehaviour
         //uncomment to test without scanning
         //PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
         //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
-
+         
         //Initialises cam
         SetUpCamera();
         //Makes both screens invisible by default
