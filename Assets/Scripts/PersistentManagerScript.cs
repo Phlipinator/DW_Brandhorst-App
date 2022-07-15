@@ -23,6 +23,8 @@ public class PersistentManagerScript : MonoBehaviour
     public List<int> unlockedArtworks;
     public List<Art> exhibition;
 
+    public float hintProgressDuration = 10;
+
     public string pathToThumbnails = "Sprites/thumbnails/";
     //do we have large images?
     public string pathToLargeImages = "Sprites/thumbnails/";
@@ -32,16 +34,15 @@ public class PersistentManagerScript : MonoBehaviour
     {
         exhibition = new List<Art>
         {
-            new Art(2, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            //new Art(2, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             //"2 Heads on Base #1"
             new Art(3, "Bruce Nauman", "1998", Room.Erdgeschoss,
-                "Die Skulputur zeigt zwei Köpfe und sie stammen aus den" +
-                "bayerischen Staatsgemäldesammlungen und stehen aktuell im Museum Brandhorst" +
+                "Die Skulputur zeigt zwei Köpfe und sie stammen aus den " +
+                "bayerischen Staatsgemäldesammlungen und stehen aktuell im Museum Brandhorst. " +
                 "Dies hier ist ein Lückenfüllertext, da mehr Infos derzeit nicht vorliegen.",
-                new List<string> { "Mehr als die Köpfe sind bei diesem Werk nicht zu sehen",
-                    "Eines weiteren Tipps bedarf es hier nicht." }),
-            new Art(4, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
-            new Art(5, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+                new List<string> { "Mehr als die Köpfe sind bei diesem Werk nicht zu sehen" }),
+            //new Art(4, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            //new Art(5, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             //"großes, silbernes Monstrum"
             new Art(6, "Joachim Bandau", "1971", Room.Erdgeschoss,
                 "Kleiderpuppensegmente, glasfaserverstärkter Polyester, verschiedene Materialien," +
@@ -62,7 +63,7 @@ public class PersistentManagerScript : MonoBehaviour
                 "wehrhaften Subjekts, das eben nicht in makelloser Perfektion erstrahlt, sondern die Spuren des Erlebten " +
                 "für alle sichtbar zur Schau trägt.",
                 new List<string> { "Es gibt 4 davon", "Es handelt sich hier um ein Hosenbein" }),
-            new Art(8, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            //new Art(8, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             //"UniAddDumThs "Tier""
             new Art(9, "Mark Leckey", "2005", Room.Untergeschoss,
                 "Die raumgreifende Installation von Mark Leckey bietet einen ungewöhnlichen Blick auf die Technikgeschichte. " +
@@ -79,9 +80,9 @@ public class PersistentManagerScript : MonoBehaviour
                 "technologisierte Welt mit dem animistischen Denken aus vormodernen Zeiten, als Gegenstände noch als lebendig oder " +
                 "gar beseelt wahrgenommen wurden.",
                 new List<string> { "Dies ist teil der großen, raumübergreifenden Installation", "Wuff!" }),
-            new Art(10, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
-            new Art(11, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
-            new Art(12, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            //new Art(10, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            //new Art(11, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+            //new Art(12, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             //"Sexbesessenheit"
             new Art(13, "Yayoi Kuama", "1929", Room.Erdgeschoss,
                 "Hemd, gefüllter Stoff, Kleiderbügel, Farbe," +
@@ -99,8 +100,8 @@ public class PersistentManagerScript : MonoBehaviour
                 "Gleichermaßen sind die Werke Chiffren für Domanovićs Auseinandersetzung mit der maßgeblichen, aber meist übersehenen Rolle, " +
                 "die Frauen bei technologischen Entwicklungen gespielt haben. Die zuden Skulpturen gehörende Timeline reflektiert diese Geschichte " +
                 "der Technologie und ihre genderspezifischen Missverhältnisse.",
-                new List<string> { "Hier bedarf es Fingerspitzengefühl.", "Im selben Raum befinden sich noch weitere Hände." }),
-            new Art(15, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
+                new List<string> { "Hier bedarf es Fingerspitzen-gefühl.", "Im selben Raum befinden sich noch weitere Hände." }),
+            //new Art(15, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             //"Vaginablätter (zweite Gegenwart)"
             new Art(16, "Genpei Akasegawa", "1961/1994", Room.Erdgeschoss,
                 "Das Relief des japanischen Künstlers Genpei Akasegawa " +

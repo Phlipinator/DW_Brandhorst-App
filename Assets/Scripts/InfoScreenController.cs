@@ -19,7 +19,15 @@ public class InfoScreenController : MonoBehaviour
         var sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToLargeImages + artID.ToString());
         artImage.style.backgroundImage = sprite;
 
-        artAuthor.text = art.getAuthor() + ", " + art.getYear(); 
+        //artAuthor.text = art.getAuthor() + ", " + art.getYear(); 
+        sprite = Resources.Load<Texture2D>("Sprites/ArtTitle/" + artID.ToString());
+        if (sprite != null)
+        {
+            VisualElement header = root.Q<VisualElement>("Header");
+            header.style.backgroundImage = sprite;
+        }
+
         artDescription.text = art.getDescription();
     }
+
 }

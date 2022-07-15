@@ -1,25 +1,64 @@
-:root
-{
-
+:root {
 }
- 
+
 .image-list-element {
-	width: 438px;
-	height: 567px;
-	margin: 25px;
+    width: 438px;
+    height: 567px;
+    margin: 25px;
 }
 
 .menu-button {
-	width: 210px;
-	height: 210px;
-	border-width: 0;
+    width: 210px;
+    height: 210px;
+    border-width: 0;
 }
 
 .room-challenges {
-	margin-left: 50px;
-	margin-right: 0;
-	margin-top:  60px;
-	margin-bottom: 81px;
-	width: 348px;
-	height: 453px;
+    margin-left: 50px;
+    margin-right: 0;
+    margin-top: 60px;
+    margin-bottom: 81px;
+    width: 348px;
+    height: 453px;
+}
+
+.progress-bar {
+    width: 0;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+.progress-active {
+    width: 100%;
+}
+
+.hint-left {
+    background-image: url('project://database/Assets/app%20design%20Assets/tip_bubble_left.png?fileID=2800000&guid=3d5b87a7c31da5d42a32641246ed1879&type=3#tip_bubble_left');
+    width: 85%;
+    font-size: 60px;
+    white-space: normal;
+    padding-left: 160px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    -unity-font-style: bold-and-italic;
+    color: rgb(255, 255, 255);
+    display: none;
+}
+
+.hint-right {
+    right: auto;
+    width: auto;
+    margin-left: 15%;
+    margin-right: 0;
+    background-image: url('project://database/Assets/app%20design%20Assets/tip_bubble_right.png?fileID=2800000&guid=9d7b2011745f4c647a5c6da7b5e14701&type=3#tip_bubble_right');
+    padding-left: 30px;
+    padding-right: 160px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    -unity-font-style: bold-and-italic;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    white-space: normal;
+    display: none;
 }
