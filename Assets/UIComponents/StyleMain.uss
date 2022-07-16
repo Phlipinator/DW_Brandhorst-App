@@ -24,8 +24,7 @@
 
 .progress-bar {
     width: 0;
-    transition-property: all;
-    transition-timing-function: linear;
+
 }
 
 .progress-active {

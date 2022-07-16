@@ -4,10 +4,17 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System;
+using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class Scene3 : MonoBehaviour
 {
     public SceneManagerScript sceneChange;
+
+    private void Start()
+    {
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
 
 
     private void Awake()
@@ -55,11 +62,12 @@ public class Scene3 : MonoBehaviour
             Label elem = new Label();
             elem.name = "hint" + i.ToString();
             elem.text = hintList[i].ToString();
+            //switch between left and right background
             elem.AddToClassList(hintSprite[hintSpritePointer]);
             hintSpritePointer = (hintSpritePointer + 1) % 2;
 
             hintContent.Add(elem);
-
+            /*
             progressBar.style.transitionDuration = new List<TimeValue>()
             {
                 new TimeValue(hintProgressDuration, TimeUnit.Second)
@@ -68,33 +76,37 @@ public class Scene3 : MonoBehaviour
             {
                 new TimeValue(hintProgressDelay, TimeUnit.Second)
             };
+            */
+            
+            StartCoroutine(startHintProgressBar(0.01f + hintProgressDelay, progressBar));
             hintProgressDelay += hintProgressDuration;
-            StartCoroutine(startHintProgressBar(0.01f, progressBar));
             StartCoroutine(registerButtonClick(0.01f + hintProgressDelay, hintButton, i));
             hintContainer.Add(HintTemplate);
+            //progressBar.AddToClassList("progress-active");
         }
         
 
     }
+    private void OnSceneUnloaded(Scene current)
+    {
+
+        Debug.Log("OnSceneUnloaded: " + current);
+    }
 
     private IEnumerator startHintProgressBar(float delay, VisualElement bar)
     {
-        Debug.Log("hier2");
-        Debug.Log(PersistentManagerScript.Instance.currentScene);
         yield return new WaitForSeconds(delay);
-        if (PersistentManagerScript.Instance.sceneHistory[PersistentManagerScript.Instance.sceneHistory.Count - 1] == "2_Challenges")
-        {
-            bar.AddToClassList("progress-active");
-        }
+        //dont't use transitions, app crashes almost always on scene change
+        //bar.AddToClassList("progress-active");
+        float endWidth = bar.parent.worldBound.width;
+        DOTween.To(() => bar.worldBound.width, x =>
+        bar.style.width = x, endWidth, PersistentManagerScript.Instance.hintProgressDuration).SetEase(Ease.Linear);
     }
 
     private IEnumerator registerButtonClick(float delay, Button button, int i)
     {
         yield return new WaitForSeconds(delay);
-        if (PersistentManagerScript.Instance.sceneHistory[PersistentManagerScript.Instance.sceneHistory.Count - 1] == "2_Challenges")
-        {
-            button.RegisterCallback<PointerUpEvent, string>(hintClicked, i.ToString());
-        }
+        button.RegisterCallback<PointerUpEvent, string>(hintClicked, i.ToString());
     }
 
 
