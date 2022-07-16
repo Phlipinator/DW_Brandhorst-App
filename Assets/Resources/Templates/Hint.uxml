@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UIComponents/StyleMain.uss?fileID=7433441132597879392&amp;guid=2f9c4b850e807904285144db8c46f8e5&amp;type=3#StyleMain" />
+    <ui:VisualElement name="root" style="display: flex; padding-bottom: 150px;">
+        <ui:VisualElement name="ButtonContainer" style="height: 132px; width: 100%;">
+            <ui:VisualElement name="background" style="position: absolute; width: 100%; height: 100%; border-top-left-radius: 40px; border-bottom-left-radius: 40px; border-top-right-radius: 40px; border-bottom-right-radius: 40px; background-color: rgba(255, 255, 255, 0.5); display: flex;" />
+            <ui:VisualElement name="progressBar" class="progress-bar" style="position: absolute; height: 100%; border-top-left-radius: 40px; border-bottom-left-radius: 40px; border-top-right-radius: 40px; border-bottom-right-radius: 40px; background-color: rgb(226, 117, 69); left: 0; align-items: center;" />
+            <ui:Button tabindex="-1" text="Tipp" display-tooltip-when-elided="true" name="button" style="font-size: 60px; min-height: auto; display: flex; height: 100%; -unity-font-style: bold; border-top-left-radius: 40px; border-bottom-left-radius: 40px; border-top-right-radius: 40px; border-bottom-right-radius: 40px; color: rgb(255, 255, 255); width: 100%; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; align-items: center; white-space: nowrap; -unity-text-align: middle-center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="HintContent" />
+    </ui:VisualElement>
+</ui:UXML>

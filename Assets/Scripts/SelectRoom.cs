@@ -25,9 +25,13 @@ public class SelectRoom : MonoBehaviour
         List<Art> artInRoom;
         VisualElement elem;
 
+        bool atLeastOneArtworkInRoom;
+
         foreach (Room currentRoom in Enum.GetValues(typeof(Room)))
         {
             roomTemplate = roomVisualTree.CloneTree();
+
+            atLeastOneArtworkInRoom = false;
 
             roomName = roomTemplate.Q<Label>("RoomName");
             roomName.text = currentRoom.ToString();
@@ -42,16 +46,22 @@ public class SelectRoom : MonoBehaviour
             for (var i = 0; i < artInRoom.Count; i++)
             {
                 id = artInRoom[i].getID();
-                elem = new VisualElement();
-                elem.name = "art" + id.ToString();
-                elem.AddToClassList("room-challenges");
-                sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + id.ToString());
-                elem.style.backgroundImage = sprite;
+                if (!PersistentManagerScript.Instance.artworkUnlocked(id))
+                {
+                    atLeastOneArtworkInRoom = true;
+                    elem = new VisualElement();
+                    elem.name = "art" + id.ToString();
+                    elem.AddToClassList("room-challenges");
+                    sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + id.ToString());
+                    elem.style.backgroundImage = sprite;
 
-                roomChallenges.Add(elem);
+                    roomChallenges.Add(elem);
+                }
             }
-
-            roomView.Add(roomTemplate);
+            if (atLeastOneArtworkInRoom)
+            {
+                roomView.Add(roomTemplate);
+            }
         }
 
     }

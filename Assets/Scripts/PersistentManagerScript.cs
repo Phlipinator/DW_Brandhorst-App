@@ -22,10 +22,13 @@ public class PersistentManagerScript : MonoBehaviour
     public WebCamTexture _cameraTexture;
     public List<int> unlockedArtworks;
     public List<Art> exhibition;
+    public string currentScene;
 
+    public float hintProgressDuration = 10;
+    
     public string pathToThumbnails = "Sprites/thumbnails/";
-    //do we have large images?
-    public string pathToLargeImages = "Sprites/thumbnails/";
+    //path to large images is now hard coded in InfoScreenController
+    //public string pathToLargeImages = "Sprites/largeImages/";
 
     //Set all art pieces of the exhibition
     public void defineExhibition()
@@ -35,11 +38,10 @@ public class PersistentManagerScript : MonoBehaviour
             new Art(2, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             //"2 Heads on Base #1"
             new Art(3, "Bruce Nauman", "1998", Room.Erdgeschoss,
-                "Die Skulputur zeigt zwei Köpfe und sie stammen aus den" +
-                "bayerischen Staatsgemäldesammlungen und stehen aktuell im Museum Brandhorst" +
+                "Die Skulputur zeigt zwei Köpfe und sie stammen aus den " +
+                "bayerischen Staatsgemäldesammlungen und stehen aktuell im Museum Brandhorst. " +
                 "Dies hier ist ein Lückenfüllertext, da mehr Infos derzeit nicht vorliegen.",
-                new List<string> { "Mehr als die Köpfe sind bei diesem Werk nicht zu sehen",
-                    "Eines weiteren Tipps bedarf es hier nicht." }),
+                new List<string> { "Mehr als die Köpfe sind bei diesem Werk nicht zu sehen" }),
             new Art(4, "Testautor", "2005", Room.Untergeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             new Art(5, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             //"großes, silbernes Monstrum"
@@ -99,7 +101,7 @@ public class PersistentManagerScript : MonoBehaviour
                 "Gleichermaßen sind die Werke Chiffren für Domanovićs Auseinandersetzung mit der maßgeblichen, aber meist übersehenen Rolle, " +
                 "die Frauen bei technologischen Entwicklungen gespielt haben. Die zuden Skulpturen gehörende Timeline reflektiert diese Geschichte " +
                 "der Technologie und ihre genderspezifischen Missverhältnisse.",
-                new List<string> { "Hier bedarf es Fingerspitzengefühl.", "Im selben Raum befinden sich noch weitere Hände." }),
+                new List<string> { "Hier bedarf es Fingerspitzen-gefühl.", "Im selben Raum befinden sich noch weitere Hände." }),
             new Art(15, "Testautor", "2005", Room.Erdgeschoss, "Beschreibung", new List<string> { "Tipp1", "Tipp2" }),
             //"Vaginablätter (zweite Gegenwart)"
             new Art(16, "Genpei Akasegawa", "1961/1994", Room.Erdgeschoss,
@@ -156,6 +158,11 @@ public class PersistentManagerScript : MonoBehaviour
         sceneHistory.Add(name);
     }
 
+    public void removeLastFromSceneHistory()
+    {
+        sceneHistory.RemoveAt(sceneHistory.Count - 1);
+    }
+
     //returns a Scene name (if history is not empty) and removes it from the list
     public string getSceneName()
     {
@@ -195,6 +202,17 @@ public class PersistentManagerScript : MonoBehaviour
             defineExhibition();
         }
         return exhibition.Where(item => item.getRoom() == room).ToList();
+    }
+
+    public bool artworkUnlocked(int searchID)
+    {
+        for (var i = 0; i < unlockedArtworks.Count; i++)
+        {
+            if (unlockedArtworks[i] == searchID) {
+                return true;
+            }
+        }
+        return false;
     }
 
     //For questions ask Philipp Thalhammer

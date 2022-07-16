@@ -19,18 +19,29 @@ public class QRCodeReader : MonoBehaviour
     public GameObject sucessScreen;
     public SceneManagerScript sceneChanger;
 
+    private bool scanSuccessful = false;
+
+    //for debug only. scans are always right
+    private bool noCameraMode = false;
+
     private string QRText;
     void Start()
     {
-        //uncomment to test without scanning
-        //PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
-        //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
-
-        //Initialises cam
-        SetUpCamera();
         //Makes both screens invisible by default
         failScreen.SetActive(false);
         sucessScreen.SetActive(false);
+
+        if (noCameraMode)
+        {
+            PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
+            scanSuccessful = true;
+            PersistentManagerScript.Instance.removeLastFromSceneHistory();
+            sucessScreen.SetActive(true);
+        } else
+        {
+            //Initialises cam
+            SetUpCamera();
+        }
     }
 
     // Update is called once per frame
@@ -45,22 +56,27 @@ public class QRCodeReader : MonoBehaviour
         }
         else
         {
-            if (QRText == "art" + PersistentManagerScript.Instance.artworkID.ToString())
+            //this is needed so that the following code isn't run on every frame once a scan happened (Update())
+            if (!scanSuccessful)
             {
-                //Adds the unlocked Artwork to a List
-                PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
-                PersistentManagerScript.Instance._cameraTexture.Stop();
-                // or goToSixt, if we want to show Tropy overview
-                //sceneChanger.goToFifth(PersistentManagerScript.Instance.artworkID);
-                sucessScreen.SetActive(true);
+                if (QRText == "art" + PersistentManagerScript.Instance.artworkID.ToString())
+                {
+                    scanSuccessful = true;
+                    //Adds the unlocked Artwork to a List
+                    PersistentManagerScript.Instance.unlockedArtworks.Add(PersistentManagerScript.Instance.artworkID);
+                    PersistentManagerScript.Instance._cameraTexture.Stop();
+
+                    //once a scan is successful, Scene 3 does not need to be accessed again.
+                    PersistentManagerScript.Instance.removeLastFromSceneHistory();
+
+                    sucessScreen.SetActive(true);
+                }
+                else
+                {
+                    //doScanning gets set to true by clicking the pop-up
+                    failScreen.SetActive(true);
+                }
             }
-            else
-            {   
-                //doScanning gets set to true by clicking the pop-up
-                failScreen.SetActive(true);
-                
-            }
-            
         }
     }
     

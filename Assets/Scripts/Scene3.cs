@@ -3,109 +3,121 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System;
+using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class Scene3 : MonoBehaviour
 {
-    /*
-    public Texture2D img01;
-    public Texture2D img02;
-    public Texture2D img03;
-    public Texture2D img04;
-    public Texture2D img05;
-    public Texture2D img06;
-    public Texture2D img07;
-    public Texture2D img08;
-    */
     public SceneManagerScript sceneChange;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-       
-
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
+
 
     private void Awake()
     {
-        //einfach derweil mal ignorieren ###
+        float hintProgressDuration = PersistentManagerScript.Instance.hintProgressDuration;
+        float hintProgressDelay = 0;
+
         var root = this.GetComponent<UIDocument>().rootVisualElement;
-        var view = root.Q<VisualElement>("view");
-        //Button scanButton = view.Q<Button>("button_scan");
-        var content = view.Q<VisualElement>("content");
 
-        var segmentButtonTimer1 = content.Q("Hint1").Q("root").Q<VisualElement>("segment_button_timer");
-        var segmentHint1 = content.Q("Hint1").Q("root").Q<VisualElement>("segment_hint");
-
-        Button hintButton1 = segmentButtonTimer1.Q<Button>("button");
-
-        var segmentButtonTimer2 = content.Q("Hint2").Q("root").Q<VisualElement>("segment_button_timer");
-        var segmentHint2 = content.Q("Hint2").Q("root").Q<VisualElement>("segment_hint");
-
-        Button hintButton2 = segmentButtonTimer2.Q<Button>("button");
-
-        var artworkThumbnail = content.Q<VisualElement>("artwork_thumbnail");
-        //###
-
-        //set art background image
+        var artworkThumbnail = root.Q<VisualElement>("artwork_thumbnail");
+        var hintContainer = root.Q<VisualElement>("HintContainer");
         int artID = PersistentManagerScript.Instance.artworkID;
-        var sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToLargeImages + artID.ToString());
+        Art art = PersistentManagerScript.Instance.getArtByID(artID);
+        List<string> hintList = art.getTips();
+        var sprite = Resources.Load<Texture2D>(PersistentManagerScript.Instance.pathToThumbnails + artID.ToString());
         artworkThumbnail.style.backgroundImage = sprite;
-        /*
-        //also change Tips? 
-        switch (PersistentManagerScript.Instance.artworkID)
+
+        sprite = Resources.Load<Texture2D>("Sprites/ArtTitle/" + artID.ToString() + "_blur");
+        if (sprite != null)
         {
-            case "art1":
-                artworkThumbnail.style.backgroundImage = new StyleBackground(img01);
-                break;
-            case "art2":
-                artworkThumbnail.style.backgroundImage = new StyleBackground(img02);
-                break;
-            case "art3":
-                artworkThumbnail.style.backgroundImage = new StyleBackground(img03);
-                break;
-            case "art4":
-                artworkThumbnail.style.backgroundImage = new StyleBackground(img04);
-                break;
-            case "art5":
-                artworkThumbnail.style.backgroundImage = new StyleBackground(img05);
-                break;
-            case "art6":
-                artworkThumbnail.style.backgroundImage = new StyleBackground(img06);
-                break;
-            case "art7":
-                artworkThumbnail.style.backgroundImage = new StyleBackground(img07);
-                break;
-            case "art8":
-                artworkThumbnail.style.backgroundImage = new StyleBackground(img08);
-                break;
-            default:
-                Debug.Log("Error");
-                break;
+            VisualElement header = root.Q<VisualElement>("Header");
+            header.style.backgroundImage = sprite;
         }
-        */
 
-        //zum Szene wechseln in Scene4 (QR-Code scanner)
-        //scanButton.clicked += () =>
-        //{
-          //  sceneChange.goToFourth();
-          //  Debug.Log("clicked");
-        //};
+        List<string> hintSprite = new List<string> { "hint-left", "hint-right" };
+        int hintSpritePointer = 0;
 
-        //Zeigen Tipps an:
-        hintButton1.clicked += () =>
+
+
+
+        var hintVisualTree = Resources.Load<VisualTreeAsset>("Templates/Hint");
+
+
+        VisualElement HintTemplate;
+        
+        for (var i = 0; i < hintList.Count; i++)
         {
-            Debug.Log("Hint button 1 clicked");
-            segmentButtonTimer1.style.display = DisplayStyle.None;
-            segmentHint1.style.display = DisplayStyle.Flex;
-            //artworkThumbnail.style.backgroundImage = new StyleBackground(img02);
+            HintTemplate = hintVisualTree.CloneTree();
+            VisualElement progressBar = HintTemplate.Q<VisualElement>("progressBar");
+            VisualElement hintContent = HintTemplate.Q<VisualElement>("HintContent");
+            Button hintButton = HintTemplate.Q<Button>("button");
+            hintButton.RemoveFromClassList("unity-button");
+            HintTemplate.name = "hintTemplate" + i.ToString();
 
-        };
+            Label elem = new Label();
+            elem.name = "hint" + i.ToString();
+            elem.text = hintList[i].ToString();
+            //switch between left and right background
+            elem.AddToClassList(hintSprite[hintSpritePointer]);
+            hintSpritePointer = (hintSpritePointer + 1) % 2;
 
-        hintButton2.clicked += () =>
-        {
-            Debug.Log("Hint button 2 clicked");
-            segmentButtonTimer2.style.display = DisplayStyle.None;
-            segmentHint2.style.display = DisplayStyle.Flex;
-        };
+            hintContent.Add(elem);
+            /*
+            progressBar.style.transitionDuration = new List<TimeValue>()
+            {
+                new TimeValue(hintProgressDuration, TimeUnit.Second)
+            };
+            progressBar.style.transitionDelay = new List<TimeValue>()
+            {
+                new TimeValue(hintProgressDelay, TimeUnit.Second)
+            };
+            */
+            
+            StartCoroutine(startHintProgressBar(0.01f + hintProgressDelay, progressBar));
+            hintProgressDelay += hintProgressDuration;
+            StartCoroutine(registerButtonClick(0.01f + hintProgressDelay, hintButton, i));
+            hintContainer.Add(HintTemplate);
+            //progressBar.AddToClassList("progress-active");
+        }
+        
+
+    }
+    private void OnSceneUnloaded(Scene current)
+    {
+
+        Debug.Log("OnSceneUnloaded: " + current);
+    }
+
+    private IEnumerator startHintProgressBar(float delay, VisualElement bar)
+    {
+        yield return new WaitForSeconds(delay);
+        //dont't use transitions, app crashes almost always on scene change
+        //bar.AddToClassList("progress-active");
+        float endWidth = bar.parent.worldBound.width;
+        DOTween.To(() => bar.worldBound.width, x =>
+        bar.style.width = x, endWidth, PersistentManagerScript.Instance.hintProgressDuration).SetEase(Ease.Linear);
+    }
+
+    private IEnumerator registerButtonClick(float delay, Button button, int i)
+    {
+        yield return new WaitForSeconds(delay);
+        button.RegisterCallback<PointerUpEvent, string>(hintClicked, i.ToString());
+    }
+
+
+    private void hintClicked(PointerUpEvent _, string hintID)
+    {
+        int id = Int32.Parse(hintID);
+        var root = this.GetComponent<UIDocument>().rootVisualElement;
+        var hintTemplate = root.Q<VisualElement>("hintTemplate" + id.ToString());
+        var hintButton = hintTemplate.Q<VisualElement>("ButtonContainer");
+        hintButton.style.display = DisplayStyle.None;
+        var hintContent = hintTemplate.Q<VisualElement>("hint" + id.ToString());
+        hintContent.style.display = DisplayStyle.Flex;
     }
 }

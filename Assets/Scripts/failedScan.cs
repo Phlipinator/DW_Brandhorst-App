@@ -9,7 +9,6 @@ public class failedScan : MonoBehaviour
     private void OnMouseDown()
     {
         Screen.SetActive(false);
-
         PersistentManagerScript.Instance.doScanning = true;
     }
 }
