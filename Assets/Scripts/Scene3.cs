@@ -9,13 +9,6 @@ using DG.Tweening;
 
 public class Scene3 : MonoBehaviour
 {
-    public SceneManagerScript sceneChange;
-
-    private void Start()
-    {
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
-    }
-
 
     private void Awake()
     {
@@ -86,11 +79,6 @@ public class Scene3 : MonoBehaviour
         }
         
 
-    }
-    private void OnSceneUnloaded(Scene current)
-    {
-
-        Debug.Log("OnSceneUnloaded: " + current);
     }
 
     private IEnumerator startHintProgressBar(float delay, VisualElement bar)

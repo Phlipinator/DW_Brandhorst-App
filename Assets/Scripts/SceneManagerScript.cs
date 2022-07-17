@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    void Awake()
-    {
-        PersistentManagerScript.Instance.currentScene = SceneManager.GetActiveScene().name;
-    }
-
     //THIS SCRIPT NEEDS TO BE ADDED TO A EMPTY GAMEOBJECT IN EVERY SCENE
     public void goBack()
     {
