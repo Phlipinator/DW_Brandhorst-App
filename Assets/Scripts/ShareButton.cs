@@ -22,18 +22,15 @@ public class ShareButton : MonoBehaviour
 	{
 		yield return new WaitForEndOfFrame();
 
-		Texture2D ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-		ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-		ss.Apply();
-
-		string filePath = Path.Combine(Application.temporaryCachePath, "shared img.png");
-		File.WriteAllBytes(filePath, ss.EncodeToPNG());
-
-		// To avoid memory leaks
-		Destroy(ss);
-
-		new NativeShare().AddFile(filePath)
-			.SetSubject("Museum Brandhorst").SetText("Ich habe dieses Kunstwerk entdeckt!").SetUrl("https://www.museum-brandhorst.de/ausstellungen/future-bodies")
+		int artID = PersistentManagerScript.Instance.artworkID;
+		Art art = PersistentManagerScript.Instance.getArtByID(artID);
+		Texture2D sprite = Resources.Load<Texture2D>("Sprites/largeImages/" + artID.ToString());
+		if (sprite == null)
+        {
+			sprite = Resources.Load<Texture2D>("Sprites/thumbnails/" + artID.ToString());
+		}		
+		new NativeShare().AddFile(sprite, "artwork.png")
+			.SetSubject("Hey, ich habe dieses Kunstwerk in der neuen App des Museum Brandhorst gefunden!").SetText(art.getDescription()).SetUrl("https://www.museum-brandhorst.de/ausstellungen/future-bodies")
 			.SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
 			.Share();
 	}
