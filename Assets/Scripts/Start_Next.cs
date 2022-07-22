@@ -16,9 +16,7 @@ public class Start_Next : MonoBehaviour
 
         next.clicked += () =>
         {
-            //Szene wechseln
             sceneChange.startTutorial();
-            Debug.Log("Next clicked");
         };
 
         

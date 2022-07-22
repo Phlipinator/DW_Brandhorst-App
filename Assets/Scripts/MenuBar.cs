@@ -18,7 +18,7 @@ public class MenuBar : MonoBehaviour
         Button middle = root.Q<Button>("trophy");
         Button home = root.Q<Button>("home");
 
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        //Depending on which current Screen, there are different Actions for the Buttons
         switch (SceneManager.GetActiveScene().buildIndex)
         {
             case 0:
@@ -51,12 +51,10 @@ public class MenuBar : MonoBehaviour
                 break;
             case 6:
                 //QR-Code Scanner
-                //middle.style.backgroundImage = new StyleBackground(exchangeIcon);
                 middle.style.display = DisplayStyle.None;
                 break;
             case 7:
                 //Info Text
-                //middle.style.backgroundImage = new StyleBackground(exchangeIcon); //has to be removed when scene5 is merged!!!
                 middle.clicked += () =>
                 {
                     //Go to Trophy
@@ -72,26 +70,7 @@ public class MenuBar : MonoBehaviour
                 break;
         }
 
-        /**if (SceneManager.GetActiveScene().buildIndex >= 3)
-        {
-            middle.style.backgroundImage = new StyleBackground(scannerIcon);
-            middle.clicked += () =>
-            {
-                sceneChange.goToFourth();
-                //Entweder Scanner öffnet sich oder man kommt zur Trophy Übersicht
-                Debug.Log("Middle");
-            };
-        }
-        else
-        {
-            middle.clicked += () =>
-            {
-                
-                //Entweder Scanner öffnet sich oder man kommt zur Trophy Übersicht
-                Debug.Log("Middle");
-            };
-        }**/
-       
+        //Zurück Button ist immer gleich
         back.clicked += () =>
         {
             if(SceneManager.GetActiveScene().name == "4_QR-Scanner")
@@ -99,16 +78,15 @@ public class MenuBar : MonoBehaviour
                 PersistentManagerScript.Instance._cameraTexture.Stop();
             }
             sceneChange.goBack();
-            Debug.Log("zurück");
         };
 
+        //Home Button geht immer direkt zur Raumübersicht
         home.clicked += () =>
         {
             if (SceneManager.GetActiveScene().name == "4_QR-Scanner")
             {
                 PersistentManagerScript.Instance._cameraTexture.Stop();
             }
-            Debug.Log("Zurück zur Raumübersicht");
             sceneChange.goToFirst();
         };
 

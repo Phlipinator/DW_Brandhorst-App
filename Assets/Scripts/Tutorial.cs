@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
-    //public Texture2D switchScreen;
-    //public Texture2D switchButton;
     public SceneManagerScript sceneChange;
 
     void Awake()
