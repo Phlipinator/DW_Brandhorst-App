@@ -23,12 +23,6 @@ Der QR-Code-Scanner wurde mithilfe der externen Bibliothek "Zxing" umgesetzt, we
 <h3>Persistent Manager</h3>
 Alle globalen Variablen werden im "PersistentManagerScript" gespeichert, welches auf einem empty GameObject in der 1. Szene einmalig erstellt wird (Singleton) und in jede weitere Szene übernommen wird. Der Prototyp ist deshalb auch nur dann voll funktionsfähig, wenn er in der Start-Szene gestartet wird (sonst kann der Persistentmanager nicht erzeugt werden). Im "PersistentManagerScript" werden zudem alle Kunstwere und deren Daten in einer Liste mit einer eigenen Art-Klasse verwaltet.
 
-<h3>Dynamische Erzeugung der Inhalte</h3>
--Chris_
-
-<h3>Social Media Share-Funktion<\h3>
--Chris-
-
 <h2>Das Team</h2>
 Das Team hat sich aufgeteilt in Design und Implementierung. Für das optische Design wurde ein erster Prototyp in AdobeXD kreiert, der als Design Guide für die spätere Unity Implementierung diente. Die Verantwortlichen hierfür sind:
 
